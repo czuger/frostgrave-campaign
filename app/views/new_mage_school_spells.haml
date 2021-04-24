@@ -1,0 +1,11 @@
+#wizard-choose-spells
+
+  .h1
+    Choisissez trois sorts de l'école du mage
+
+  .row
+    .d-grid.gap-2.gy-2
+      <spell-button v-for="spell in spells" :key="spell" v-bind:spell_name="spell">
+      </spell-button>
+
+  %input{ type: :hidden, id: :mage_type, value: mage_type}
