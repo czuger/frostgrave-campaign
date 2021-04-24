@@ -1,0 +1,479 @@
+{
+  "CHRONOMANCIEN": {
+    "title": "CHRONOMANCIEN",
+    "spells": [
+      {
+        "title": "EFFONDREMENT",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Ce sort ne peut cibler que des structures inanimées comme des bâtiments ou des murs. Le lanceur de sorts accélère le passage du temps sur une petite surface de la structure, causant ainsi son effondrement. Cela peut créer une ouverture de la taille d’une porte qui doit être matérialisée sur la table de jeu. Le sort peut aussi être utilisé pour faire s’effondrer une partie du plancher de l’étage où se trouve une figurine. Dans ce cas, la figurine visée doit réussir un test de Mouvement (SD22) ou chuter d’un étage et subir les dommages appropriés.Si ce sort est lancé sur un mur créé par le sort Mur, il est totalement détruit. S’il est lancé sur un décor sur lequel se trouve l’Œil du mage, l’œil disparait et le sort est annulé."
+      },
+      {
+        "title": "DÉCOMPOSITION",
+        "difficulty": 12,
+        "target": "Ligne de vue",
+        "description": "Le lanceur de sorts choisit une arme de la cible et accélère sa décomposition pour la faire tomber en poussière, la rendant inutilisable. Ce sort n’a pas d’effet sur les armes magiques (y compris les armes enchantées temporairement) ni sur les créatures (à moins que leur profil indique qu’elles sont équipées d’une arme tirée de la liste des armes et armures communes"
+      },
+      {
+        "title": "ACTE RAPIDE",
+        "difficulty": 8,
+        "target": "Ligne de vue",
+        "description": "Ce sort ne peut être lancé que sur un membre de l’expédition du lanceur ou sur une créature incontrôlée. La figurine sera activée à la fin de la phase en cours à la place de sa phase habituelle. Par exemple, un apprenti qui lance ce sort sur une créature incontrôlée permet à cette créature d’être activée à la fin de la phase d’apprenti de ce joueur.Les lanceurs de sorts ne peuvent pas lancer ce sort sur eux-mêmes ni sur une figurine qui a déjà été activée à ce tour."
+      },
+      {
+        "title": "PIEDS AGILES",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "La cible gagne un bonus de +2 en Mouvement jusqu’à la fin de la partie. Lancer ce sort plusieurs fois sur la même cible n’a pas d’effet."
+      },
+      {
+        "title": "PÉTRIFIER",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Si le sort est lancé avec succès, la cible doit immédiatement effectuer un test de Volonté d’un SD égal au test de lancement. En cas d’échec, elle perd toutes les actions de sa prochaine activation.De plus, la figurine subit un malus de -3 au Combat (jusqu’à un minimum de +0) et ne peut plus être la cible du sort Saut jusqu’à la fin de sa prochaine action de mouvement.Les créatures bénéficiant du trait Grande cible reçoivent un bonus de +8 à leur test de Volonté pour résister à ce sort."
+      },
+      {
+        "title": "RALENTIR",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Si le sort est lancé avec succès, la cible est réduite à une seule action par activation (qui ne doit pas obligatoirement être un mouvement). Elle peut tenter un test de Volonté d’un SD égal au test de lancement à la fin de chacune de ses activations. Le sort est annulé en cas de succès."
+      },
+      {
+        "title": "RÉSERVE TEMPORELLE",
+        "difficulty": 14,
+        "target": "Lanceur",
+        "description": "Le lanceur de sorts capture un fragment du présent pour l’utiliser plus tard. Il doit pouvoir utiliser deux actions lors de son activation pour pouvoir lancer Réserve Temporelle, la première étant utilisée pour lancer le sort. En cas de succès, sa deuxième action est perdue mais le lanceur dispose à présent d’une « action de réserve » qu’il pourra utiliser lors d’un prochain tour.Cette action ne peut être utilisée que lors de l’activation du lanceur de sorts, qui bénéficiera alors de trois actions lors de cette activation."
+      },
+      {
+        "title": "BOUCLE TEMPORELLE",
+        "difficulty": 14,
+        "target": "Lanceur",
+        "description": "Ce sort ne peut être lancé que par un mage. Le mage sera à nouveau activé pendant la phase de l’apprenti et pendant la phase des soldats, en plus des figurines qui peuvent normalement être activées lors de ces phases.Aucun soldat ne peut être activé pendant la phase du mage et le lanceur du sort ne peut pas participer à une activation de groupe.Le mage peut effectuer une action unique (qui ne doit pas obligatoirement être un mouvement) lors de chacune des phases. S’il s’est déjà déplacé lors d’une phase précédente, ses prochains mouvements se font à la moitié de sa caractéristique de Mouvement.Si un mage lance ce sort pendant deux tours consécutifs, il subit immédiatement 8 points de dommages."
+      }
+    ]
+  },
+  "ÉLÉMENTALISTE": {
+    "title": "ÉLÉMENTALISTE",
+    "spells": [
+      {
+        "title": "APPEL DE LA TEMPÊTE",
+        "difficulty": 12,
+        "target": "Zone d’effet",
+        "description": "Toutes les attaques d’arc ou d’arbalète subissent un malus de -1 au Tir jusqu’à la fin de la partie. Ce sort peut être lancé à plusieurs reprises (et par des lanceurs de sorts différents), augmentant ainsi le malus de -1 à chaque fois, jusqu’à un maximum de -5."
+      },
+      {
+        "title": "SPHÈRE DE DESTRUCTION",
+        "difficulty": 12,
+        "target": "Zone d’effet",
+        "description": "Toute figurine située à 3’’ ou moins du lanceur de sorts (sans l’inclure lui-même) subit une attaque magique élémentaire +5."
+      },
+      {
+        "title": "PROJECTILE ÉLÉMENTAIRE",
+        "difficulty": 12,
+        "target": "Ligne de vue",
+        "description": "Le lanceur de sorts choisit une figurine ennemie située à 16’’ ou moins et en ligne de vue, et lui lance une boule d’énergie élémentaire. La cible, et toute figurine dans sa ligne de vue et située à 1’’ ou moins, subit une attaque de tir magique élémentaire +5. Lancez séparément pour chaque figurine affectée. Déterminez les éventuels couverts en prenant la cible du sort comme point de départ de l’attaque.Ce sort n’affecte pas une figurine masquée, même partiellement, par une autre figurine."
+      },
+      {
+        "title": "ÉCLAIR ÉLÉMENTAIRE",
+        "difficulty": 12,
+        "target": "Ligne de vue",
+        "description": "Le lanceur de sorts effectue une attaque de tir magique élémentaire +7 contre une cible située à 16’’ ou moins et en ligne de vue."
+      },
+      {
+        "title": "MARTEAU ÉLÉMENTAIRE",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Ce sort doit être lancé sur une arme. La prochaine fois que le porteur de cette arme remporte un combat et provoque au moins 1 point de dommage, l’arme inflige 5 points de dommages magiques élémentaires supplémentaires.Si le sort est lancé sur une arme commune et qu’elle est utilisée contre une créature immunisée aux armes communes, l’arme ne provoquera que les 5 points de dommages magiques élémentaires.Si le sort est lancé sur un arc ou une arbalète, il affecte uniquement le prochain tir."
+      },
+      {
+        "title": "BOUCLIER ÉLÉMENTAIRE",
+        "difficulty": 10,
+        "target": "Lanceur",
+        "description": "Le lanceur de sorts forme un bouclier flottant pour se protéger. Ce bouclier absorbe les 3 prochains points de dommages que le lanceur de sort devrait subir suite à un combat ou à un tir. Le sort est annulé dès que 3 points de dommages ont été absorbés.Un lanceur de sort ne peut avoir qu’un seul Bouclier Élémentaire actif à la fois."
+      },
+      {
+        "title": "DISPERSION DES TRAITS",
+        "difficulty": 12,
+        "target": "Zone d’effet",
+        "description": "Si le sort est lancé avec succès, le lanceur de sorts effectue une unique attaque de tir magique élémentaire +0 contre toute les figurines ennemies (membre d’une expédition ou créature incontrôlée) située à 12’’ ou moins et en ligne de vue. Cela peut inclure toutes les figurines ennemies au combat, bien que les règles normales de tir dans un combat s’appliquent."
+      },
+      {
+        "title": "MUR",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Ce sort crée un mur de 6’’ de long et 3’’ de haut, situé à 10’’ ou moins du lanceur et dont une partie doit être dans sa ligne de vue. Ce mur peut être escaladé normalement.Lancez un dé à la fin de chaque tour qui suit le lancement du sort : de 1 à 4 le mur se dissipe."
+      }
+    ]
+  },
+  "ENCHANTEUR": {
+    "title": "ENCHANTEUR",
+    "spells": [
+      {
+        "title": "ANIMATION DE GOLEM",
+        "difficulty": 10,
+        "target": "Hors du jeu (AV)",
+        "description": "On suppose que le lanceur de sorts a construit un golem avant de lancer ce sort. S’il est lancé avec succès, le golem devient immédiatement un membre permanent de l’expédition et remplace un soldat. Le lanceur de sorts doit annoncer la taille du golem qu’il tente d’animer (golem mineur, golem ou golem majeur, voir page 119) avant de lancer le sort. Plus il est grand, plus la difficulté sera importante : golem mineur -0, golem -3, golem majeur -6. Il n’y a pas de limite au nombre de golems qu’une expédition peut compter, tant que la limite habituelle des soldats est respectée. Les golems majeurs comptent comme des spécialistes, les autres sont des soldats standards."
+      },
+      {
+        "title": "CONTRÔLE D’UN GOLEM",
+        "difficulty": 12,
+        "target": "Ligne de vue",
+        "description": "Si le sort est lancé avec succès, le golem ciblé doit immédiatement effectuer un test de Volonté d’un SD égal au test de lancement du sort. En cas d’échec, le golem devient un membre temporaire de l’expédition du lanceur. Le contrôle dure jusqu’à la fin de la partie ou jusqu’à ce que le sort soit annulé.Le lanceur de sorts peut utiliser une action pour annuler son sort et il ne peut contrôler qu’un seul golem à la fois."
+      },
+      {
+        "title": "ENCHANTEMENT ÉTERNEL",
+        "difficulty": 14,
+        "target": "Hors du jeu (AP)",
+        "description": "Ce sort rend permanent un Enchantement d’Arme ou un Enchantement d’Armure encore actif à la fin d’une partie. L’arme ou l’armure concernée devient magique et occupe un emplacement comme d’habitude."
+      },
+      {
+        "title": "ENCHANTEMENT D’ARMURE",
+        "difficulty": 8,
+        "target": "Ligne de vue",
+        "description": "Ce sort ne peut être lancé que sur une figurine portant une armure. Cette armure devient magique et octroie un bonus de +1 en Armure jusqu’à la fin de la partie. Lancer plusieurs fois ce sort sur une même cible n’a pas d’effet."
+      },
+      {
+        "title": "ENCHANTEMENT D’ARME",
+        "difficulty": 8,
+        "target": "Ligne de vue",
+        "description": "Le lanceur de sorts choisit une arme qu’il enchante. Les armes de mêlée gagnent Combat +1 et sont considérées comme magiques, les arcs et les arbalètes gagnent Tir +1 mais leurs tirs ne sont pas magiques. Il est possible de lancer ce sort sur une flèche ou un carreau d’arbalète, qui gagne alors Tir +1 et compte comme une attaque de tir magique unique.Lancer plusieurs fois ce sort sur une même arme n’a pas d’effet. Quand un tireur utilise une arme de tir et un projectile enchantés, il ne peut appliquer que l’un des deux bonus."
+      },
+      {
+        "title": "BOMBE ARCANIQUE",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Le lanceur de sorts saisit une pierre, ou un objet de taille équivalente, et l’imprègne d’énergie magique avant de la lancer sur une cible où elle explose en des centaines de fragments meurtriers. Le lanceur choisit un point situé à 14’’ ou moins. Toute figurine amie ou ennemie, se trouvant dans un rayon de 1,5’’ de ce point subit une attaque de tir magique +3. Utilisez le point ciblé pour déterminer les lignes de vue et les éventuels couverts."
+      },
+      {
+        "title": "FORCE",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "La cible de ce sort reçoit un bonus de +2 en Combat.Lancer ce sort plusieurs fois sur la même cible n’a pas d’effet."
+      },
+      {
+        "title": "TÉLÉKINÉSIE",
+        "difficulty": 10,
+        "target": "Au contact",
+        "description": "Le lanceur de sorts peut déplacer un trésor qui n’est pas porté par une figurine, situé dans un rayon de 16’’, pour une distance maximale de 6’’ et dans n’importe quelle direction. Il doit conserver une ligne de vue sur le trésor pendant tout le déplacement, sans quoi il tombe immédiatement au sol.Ce sort ne peut pas cibler un trésor qui nécessite des conditions spéciales pour être ramassé. Il ne peut pas non-plus cibler le trésor central tant qu’il n’a pas été ramassé au moins une fois."
+      }
+    ]
+  },
+  "ILLUSIONNISTE": {
+    "title": "ILLUSIONNISTE",
+    "spells": [
+      {
+        "title": "BEAUTÉ",
+        "difficulty": 10,
+        "target": "Lanceur",
+        "description": "Quiconque pose les yeux sur un lanceur de sorts affecté par Beauté est subjugué par son apparence. Tous les membres de l’expédition adverse doivent réussir un test de Volonté d’un SD égal au test de lancement s’ils souhaitent : se déplacer au combat contre le lanceur de sorts, effectuer un tir qui pourrait potentiellement toucher le lanceur de sorts (en incluant les sorts qui génèrent des attaques de tir) ou lancer tout sort prenant pour cible le lanceur de sorts.Les lanceurs de sorts peuvent renforcer leur test de Volonté comme pour résister à un sort. Une figurine ne peut tenter qu’un seul test de Volonté par tour. Ce sort est sans effet sur les créatures (toute figurine du Chapitre Six : Bestiaires, page 115) et les chiens de guerre."
+      },
+      {
+        "title": "CILLEMENT",
+        "difficulty": 12,
+        "target": "Ligne de vue",
+        "description": "Ce sort peut cibler toute figurine située à 12’’ ou moins du lanceur et en ligne de vue. La figurine est déplacée de 4’’ dans une direction aléatoire. Elle peut effectuer un test de Volonté d’un SD égal au test de lancement du sort pour résister et elle ne sera pas déplacée en cas de succès.Les créatures incontrôlées tenteront toujours de résister à ce sort."
+      },
+      {
+        "title": "RICHESSE ILLUSOIRE",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Ce sort ne peut être lancé que sur une figurine portant un trésor. Elle doit immédiatement effectuer un test de Volonté d’un SD égal au test de lancement. En cas d’échec, le lanceur de sorts peut prendre le trésor porté par la figurine et le déplacer de 4’’ dans n’importe quelle direction, à condition qu’il reste dans sa ligne de vue."
+      },
+      {
+        "title": "LUMINESCENCE",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "La figurine cible est entourée d’une vive lumière. Tous les tirs qui la visent (provenant d’armes de tir ou de sorts) bénéficient d’un bonus de +3.Lancer ce sort plusieurs fois sur la même cible n’a pas d’effet."
+      },
+      {
+        "title": "SOLDAT ILLUSOIRE",
+        "difficulty": 12,
+        "target": "Hors du jeu (AV) OU Au contact",
+        "description": "Hors jeu : ajoute un soldat illusoire à l’expédition uniquement pour la prochaine partie (si lancé Hors du jeu) ou jusqu’à la fin de la partie (si lancé en jeu). Ce soldat est de n’importe quel type (voir tables pages 22) sauf Apothicaire.Il ne peut pas porter de trésor mais il est considéré comme un soldat normal autrement : peut combattre et repousser mais pas infliger de dommage, peut apporter du soutien, etc.Il est retiré du jeu s’il subit au moins 1 point de dommage (de n’importe quelle source). Un seul soldat illusoire par expédition à la fois. Le joueur doit indiquer quelle figurine est le soldat illusoire."
+      },
+      {
+        "title": "INVISIBILITÉ",
+        "difficulty": 12,
+        "target": "Au contact",
+        "description": "La figurine ciblée devient invisible et ne peut pas être attaquée ni ciblée par un sort (bien qu’elle puisse être affectée par les sorts à zone d’effet, tel que Bombe arcanique). Si la figurine invisible se déplace au combat, lance un sort, effectue une attaque (y compris un tir) ou ramasse un trésor, le sort est annulé et elle redevient visible.Ce sort peut être lancé sur une figurine transportant un trésor, ce qui le rend tous les deux invisibles. Mais si la figurine pose ce trésor, le sort est également annulé."
+      },
+      {
+        "title": "TÉLÉPORTATION",
+        "difficulty": 10,
+        "target": "Lanceur",
+        "description": "Si le sort est lancé avec succès, le lanceur se déplace immédiatement sur n’importe quel point situé dans sa ligne de vue, mais il ne peut plus effectuer d’autre action après le lancement.Ce sort ne peut pas être utilisé pour entrer au combat ou pour quitter la table."
+      },
+      {
+        "title": "TRANSPOSITION",
+        "difficulty": 12,
+        "target": "Ligne de vue",
+        "description": "Ce sort permet d’échanger les positions de deux figurines situées sur la table. Elles doivent toutes les deux se trouver à 12’’ l’une de l’autre et en ligne de vue du lanceur. Le lanceur de sorts peut utiliser la Transposition pour changer lui-même de place avec une autre figurine.Les membres d’une expédition adverse peuvent être pris pour cibles de ce sort, mais ils peuvent effectuer un test de Volonté d’un SD égal au test de lancement pour résister. En cas ce succès, le sort est annulé et aucune figurine n’est déplacée.Les figurines alliées et les créatures incontrôlées n’effectuent pas de test de Volonté pour résister."
+      }
+    ]
+  },
+  "NÉCROMANT": {
+    "title": "NÉCROMANT",
+    "spells": [
+      {
+        "title": "CRÂNE ANIMÉ",
+        "difficulty": 8,
+        "target": "Ligne de vue",
+        "description": "Le lanceur de sorts insuffle une magie maléfique dans un crâne avant de le lancer sur un ennemi. Placez un crâne animé (page 125) à 6’’ ou moins du lanceur de sorts (il peut être placé directement au combat). Le crâne est une créature incontrôlée. Le lanceur de sorts ne peut pas relancer Crâne Animé tant que la précédente créature est toujours sur la table, mais il peut utiliser une action pour annuler son sort, auquel cas elle est immédiatement retirée de la table."
+      },
+      {
+        "title": "TRAIT OSSEUX",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Ce sort projette un petit fragment d’os tranchant sur la cible. Le lanceur de sorts effectue un tir à +5 sur toute figurine à 12’’ ou moins et en ligne de vue. Ceci ne compte pas comme une attaque magique."
+      },
+      {
+        "title": "LES OS DE LA TERRE",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Une main squelettique surgit du sol et saisit la cheville de la cible. La figurine ne peut plus effectuer d’action de mouvement jusqu’à ce qu’elle se libère. Toute forme de mouvement magique, à l’exception du sort Saut, permet à la figurine de s’échapper de la saisie. Si la main (Combat +0, Santé 1) subit un point de dommage, elle disparait et la cible est libérée.Les figurines en contact socle à socle avec la main peuvent l’attaquer ou fournir un bonus de support. La main provoque des dommages normalement si elle remporte un combat.Ce sort ne peut être lancé que sur une cible au contact avec le sol. Les créatures disposant de la capacité Grande cible ne sont pas affectées par ce sort. La portée maximale des Os de la Terre est de 18’’."
+      },
+      {
+        "title": "CONTRÔLE DES MORTS-VIVANTS",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Si le sort est lancé avec succès, la créature mort-vivante ciblée doit immédiatement effectuer un test de Volonté d’un SD égal au test de lancement du sort. En cas d’échec, le mort-vivant devient un membre temporaire de l’expédition du lanceur. Le contrôle dure jusqu’à la fin de la partie ou jusqu’à ce que le sort soit annulé.Le lanceur de sorts peut utiliser une action pour annuler son sort et il ne peut contrôler qu’une seule créature mort- vivante à la fois."
+      },
+      {
+        "title": "INVOCATION DE ZOMBIE",
+        "difficulty": 10,
+        "target": "Hors du jeu (AV) OU Au contact",
+        "description": "Si le sort est lancé avec succès, le lanceur ajoute un zombie (page 126) comme membre temporaire de son expédition. Si le sort est lancé avant une partie, le zombie peut être déployé normalement. S’il est lancé pendant une partie, le zombie apparait au contact du socle du lanceur de sorts.Une expédition ne peut avoir qu’un seul zombie invoqué à la fois. Si le zombie quitte la table ou est tué, le sort peut être lancé à nouveau pour en invoquer un autre."
+      },
+      {
+        "title": "MANGE-SORT",
+        "difficulty": 12,
+        "target": "Ligne de vue",
+        "description": "Ce sort annule les effets de n’importe quel sort en jeu. Le lanceur de ce sort perd immédiatement 1 point de Santé s’il est lancé avec succès.Ce sort ne permet pas de faire disparaitre une créature invoquée, mais il peut annuler le contrôle de cette créature."
+      },
+      {
+        "title": "VOL DE VIE",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "La cible de ce sort doit immédiatement effectuer un test de Volonté d’un SD égal au test de lancement du sort. En cas d’échec, elle perd immédiatement 3 points de Santé et le lanceur de sorts gagne 3 points de Santé (même si la cible avait moins de 3 points de Santé restants). Ceci ne peut pas amener la valeur de Santé du lanceur de sorts au-dessus de sa valeur de base.Ce sort est sans effet sur les morts- vivants et les golems. Un lanceur de sort peut cibler un membre de sa propre expédition mais s’il le fait, la cible quitte l’expédition immédiatement (et de manière permanente) et sera traitée comme une créature incontrôlée jusqu’à la fin de la partie."
+      },
+      {
+        "title": "MORT SUBITE",
+        "difficulty": 18,
+        "target": "Ligne de vue",
+        "description": "Ce sort ne peut cibler qu’une figurine située à 8’’ ou moins du lanceur. La cible doit réussir un test de Volonté d’un SD égal au test de lancement ou voir sa Santé réduite immédiatement à 0.Toutes les figurines peuvent renforcer leur test de Volonté pour tenter de résister à ce sort, même si elles ne sont pas des lanceurs de sorts.Le lanceur de sorts perd immédiatement 1 point de Santé lorsqu’il tente de lancer Mort Subite (peu importe que ce soit un succès ou un échec), en plus des dommages subis normalement pour l’échec d’un sort ou un renforcement.Ce sort est sans effet sur les morts- vivants et les golems."
+      }
+    ]
+  },
+  "CRYPTOMANCIEN": {
+    "title": "CRYPTOMANCIEN",
+    "spells": [
+      {
+        "title": "ABSORPTION DE SAVOIR",
+        "difficulty": 12,
+        "target": "Hors du jeu (AP)",
+        "description": "Ce sort ne peut être lancé que par un mage, qui peut absorber la connaissance d’un ouvrage sans devoir le consulter. Le mage gagne immédiatement 40 points d’expérience si le sort est lancé avec succès, pour représenter ce brusque afflux de savoir.Ces points d’expérience ne comptent pas dans la limite des 300 points qui peuvent être gagnés par partie. Ce sort ne peut pas être lancé après une partie durant laquelle le mage a été réduit à 0 de Santé."
+      },
+      {
+        "title": "PONT",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Le lanceur de sorts transforme un long parchemin en pont éphémère. Placez un pont (ou un escalier) de 6’’ de long et 2’’ de large n’importe où et totalement en ligne de vue du lanceur. Ce pont semble sans relief ni épaisseur et ses extrémités peuvent être sur des plans différents. Il peut même flotter dans les airs ! Les figurines peuvent l’emprunter sans pénalité de mouvement. Un lanceur de sorts ne peut avoir qu’un seul pont en jeu à la fois.Lors de son activation, le lanceur de sorts peut annuler son sort pour une action gratuite. Sinon, lancez un dé à la fin de chaque tour : sur un résultat de 1 ou 2, le pont disparait. Les figurines présentes sur le pont s’il disparait chutent au sol."
+      },
+      {
+        "title": "LE VERBE FACILE",
+        "difficulty": 14,
+        "target": "Zone d’effet",
+        "description": "Ce sort fait apparaitre une rune brillante dans le ciel. Le lanceur de sorts choisit un sort que Le Verbe Facile affecte. Toute tentative de lancement du sort affecté (quel que soit le lanceur) subit un malus de -3 jusqu’à la fin de la partie.Un lanceur de sorts ne peut avoir qu’un seul sort de Verbe Facile actif à la fois.Un lanceur de sorts ne peut avoir qu’un seul sort affecté par le Verbe Facile à la fois."
+      },
+      {
+        "title": "RUNE EXPLOSIVE",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Le lanceur de sorts trace une rune de pouvoir sur le sol ou sur un mur, à 4’’ et dans sa ligne de vue (placez un marqueur pour la représenter).Tout personnage ou créature n’appartenant pas à l’expédition du lanceur au début de la partie qui se déplace à 1’’ ou moins de la rune provoque son explosion. Toute figurine (amie ou ennemie) située à 2’’ ou moins subit immédiatement une attaque magique +5. Notez qu’une rune placée à 1’’ d’une figurine n’explose pas immédiatement car elle nécessite un déplacement à proximité pour se déclencher.Un lanceur de sorts peut avoir jusqu’à trois Runes explosives en jeu au même moment.A la fin de chaque tour, le lanceur peut décider d’annuler tout ou partie de ses runes actives. Si le lanceur des runes explosives n’est plus sur la table, lancez un dé pour chaque rune à la fin de chaque tour : elle disparaît sur 11 ou plus."
+      },
+      {
+        "title": "DÉCHAINEMENT DE LA PLUME",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Si le sort est lancé avec succès, la cible est attaquée par une plume tranchante. Bien qu’elle ne provoque aucun dommage, elle brise la concentration de la cible qui subit les malus suivants : Mouvement -1, Combat -2, Tir -4, lancements de sorts -2.Dès que la figurine cible est activée, elle peut tenter un test de Volonté d’un SD égal au test de lancement. En cas de succès, elle attrape la plume au vol et la détruit.Lancer ce sort plusieurs fois sur la même cible n’a pas d’effet."
+      },
+      {
+        "title": "LE VERBE DIFFICILE",
+        "difficulty": 14,
+        "target": "Zone d’effet",
+        "description": "Ce sort fait apparaitre une rune brillante dans le ciel. Le lanceur de sorts peut choisir un sort que le Verbe Difficile affecte. Toute tentative de lancement du sort affecté (quel que soit le lanceur) bénéficie d’un bonus de +3 jusqu’à la fin de la partie.Un lanceur de sorts ne peut avoir qu’un seul sort de Verbe Difficile actif à la fois.Un lanceur de sorts ne peut avoir qu’un seul sort affecté par le Verbe Difficile à la fois."
+      },
+      {
+        "title": "POUSSÉE",
+        "difficulty": 8,
+        "target": "Ligne de vue",
+        "description": "Si le sort est lancé avec succès, la cible subit immédiatement une attaque avec un bonus de +10. Si l’attaque est réussie elle n’inflige pas de dommage, mais la cible est repoussée de 1’’ à l’opposé du lanceur de sorts pour chaque point de dommage qu’elle aurait dû subir. Si elle doit être repoussée en bord de table ou sur un élément de décor de 0,5’’ de haut, elle s’arrête immédiatement. Les autres figurines n’arrêtent pas (et ne font pas de dommages) à la figurine ainsi repoussée car elles s’écartent pour la laisser passer.Si le sort est lancé par-dessous la cible, elle est poussée verticalement et subira les dommages de chute normalement. Ce sort peut pousser une figurine hors d’un combat car il n’est pas considéré comme un tir et la cible n’est donc pas déterminée aléatoirement."
+      },
+      {
+        "title": "CRÉATION DE PARCHEMIN",
+        "difficulty": 12,
+        "target": "Hors du jeu (AP)",
+        "description": "Ce sort permet de créer un parchemin que le mage connait déjà, ou pour lequel il dispose d’un grimoire. Ce parchemin peut être vendu, donné à une figurine ou conservé dans le repaire du mage."
+      }
+    ]
+  },
+  "DEVIN": {
+    "title": "DEVIN",
+    "spells": [
+      {
+        "title": "CONSCIENCE",
+        "difficulty": 12,
+        "target": "Hors du jeu (AV)",
+        "description": "Si le lanceur de ce sort est présent sur la table, son expédition gagne un bonus de +2 à ses jets d’initiative. Les bonus sont cumulatifs, donc si un mage et son apprenti le lancent avec succès, le joueur peut ajouter un bonus de +4 à ses jets d’initiative (le bonus maximum est de +4).Ce sort est considéré comme actif sur le lanceur pour toute la durée de la partie et peut être annulé par tout ce qui permet d’annuler un sort."
+      },
+      {
+        "title": "SCIENCE DU COMBAT",
+        "difficulty": 12,
+        "target": "Au contact",
+        "description": "Ce sort permet à la cible de deviner et d’anticiper les attaques de son adversaire au corps-à-corps. Elle bénéficie d’un bonus de +1 en Combat et à son Armure jusqu’à la fin de la partie. Lancer ce sort plusieurs fois sur la même cible n’a pas d’effet."
+      },
+      {
+        "title": "CONTRÔLE DE L’ESPRIT",
+        "difficulty": 12,
+        "target": "Ligne de vue",
+        "description": "Si lancé avec succès, la cible doit immédiatement effectuer un test de Volonté d’un SD égal au test de lancement du sort. En cas d’échec, elle rejoint temporairement l’expédition du lanceur et peut être activée normalement pendant la phase adéquate.Après chacune de ses activations, la figurine doit effectuer un nouveau test de Volonté avec le même SD. Si succès le sort est annulé et la figurine retrouve son camp.Un lanceur de sorts ne peut avoir qu’un seul Contrôle de l’esprit actif à la fois. Une figurine ainsi contrôlée ne peut pas effectuer d’action qui lui causerait des dommages immédiats (comme chuter de plus de 3’’) mais elle peut attaquer une figurine ennemie. Elle ne peut pas non-plus quitter la table.Le lanceur de sorts peut annuler le sort à la fin de n’importe quel tour de jeu. Ce sort est sans effet sur les lanceurs de sorts mais il peut être lancé sur toutes les autres figurines, sauf indication contraire."
+      },
+      {
+        "title": "VERROU DE L’ESPRIT",
+        "difficulty": 12,
+        "target": "Ligne de vue",
+        "description": "La cible de ce sort est immunisée aux sorts Contrôle de l’Esprit et Suggestion jusqu’à la fin de la partie. Si la cible était sous l’effet d’un Contrôle de l’Esprit, le sort est annulé et elle se libère.La cible bénéficie également d’un bonus de +2 en Volonté jusqu’à la fin de la partie."
+      },
+      {
+        "title": "SECRET RÉVÉLÉ",
+        "difficulty": 12,
+        "target": "Hors du jeu (AV)",
+        "description": "Ce sort révèle l’emplacement de trésors perdus. Chaque lancement réussi de ce sort avant la partie permet au joueur d’effectuer deux jets pour chaque trésor (à l’exception du trésor central qui n’est pas affecté par ce sort) sur la table des trésors (page 58) et de conserver le résultat souhaité."
+      },
+      {
+        "title": "SUGGESTION",
+        "difficulty": 12,
+        "target": "Ligne de vue",
+        "description": "Si le sort est lancé avec succès, la cible lâche immédiatement tous trésors qu’elle transportait. Le lanceur de sorts peut déplacer la figurine ciblée jusqu’à 3’’ dans n’importe quelle direction, à condition que cela n’amène pas la cible au combat et que ce déplacement ne lui provoque pas de dommages immédiats (en tombant de plus de 3’’ par exemple).La cible de ce sort peut effectuer un test de Volonté d’un SD égal au test de lancement. En cas de succès, le sort est sans effet."
+      },
+      {
+        "title": "REGARD VÉRITABLE",
+        "difficulty": 10,
+        "target": "Lanceur",
+        "description": "Le lanceur de sorts et toutes les figurines situées dans un rayon de 6’’ peuvent voir les figurines invisibles et sont immunisés aux effets du sort Beauté. De plus, si une figurine invisible se trouve à 6’’ ou moins du lanceur, le sort d’Invisibilité est annulé.Un Soldat Illusoire situé à 6’’ ou moins du lanceur est immédiatement retiré de la table."
+      },
+      {
+        "title": "L’ŒIL DU MAGE",
+        "difficulty": 8,
+        "target": "Ligne de vue",
+        "description": "Ce sort peut être lancé sur tout élément de décor vertical disposant d’une zone plate (donc pas sur le dessus de ce décor), situé à 12’’ ou moins du lanceur. Placez un marqueur afin de le représenter.Jusqu’à la fin de la partie, le lanceur peut décider de l’utiliser comme point d’origine de tous les sorts Ligne de Vue et Au Contact qu’il lance. Les sorts de Zones d’Effet ne peuvent pas être lancés de cette manière.L’Œil du mage a un champ de vision de 180°. Un lanceur de sorts ne peut en posséder qu’un seul actif à la fois.Si le décor sur lequel l’oeil est placé est endommagé ou détruit (par le sort Effondrement par ex), le sort est annulé. Le lanceur de sorts peut annuler ce sort à la fin de n’importe quel tour."
+      }
+    ]
+  },
+  "INVOCATEUR": {
+    "title": "INVOCATEUR",
+    "spells": [
+      {
+        "title": "LIEN DÉMONIAQUE",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Si le sort est lancé avec succès, le démon ciblé doit immédiatement effectuer un test de Volonté d’un SD égal au test de lancement du sort. En cas d’échec, le démon devient un membre temporaire de l’expédition du lanceur. Le contrôle dure jusqu’à la fin de la partie ou jusqu’à ce que le sort soit annulé.Le lanceur de sorts peut utiliser une action pour annuler son sort et il ne peut contrôler qu’un seul démon à la fois."
+      },
+      {
+        "title": "DIABLOTIN",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Si le sort est lancé avec succès, le lanceur place un diablotin (page 120) n’importe où sur la table tant qu’il est dans sa ligne de vue et à plus de 3’’ de toute autre figurine. Le diablotin suit les règles habituelles des créatures incontrôlées et sera activé lors de la prochaine phase des créatures.Si le lanceur de sorts relance ce sort, le premier diablotin disparait immé- diatement."
+      },
+      {
+        "title": "SAUT",
+        "difficulty": 8,
+        "target": "Ligne de vue",
+        "description": "Ce sort ne peut être lancé que sur un membre de l’expédition du lanceur. En cas de succès, déplacez immédiatement la cible jusqu’à 10’’ dans n’importe quelle direction, y compris verticalement. Ce mouvement doit être en ligne droite ou former un arc, mais il ne peut pas contenir de virage. Si la figurine se retrouve dans le vide à l’issu de ce mouvement, elle tombe et subit les dommages comme d’habitude.Si la cible transporte un trésor, le saut est réduit à 5’’.Ce mouvement ne permet pas de faire sortir une figurine de la table ou de l’amener au combat. La cible du sort ne peut plus effectuer d’actions lors de ce tour, mais elle a pu en effectuer normalement avant que le sort soit lancé."
+      },
+      {
+        "title": "NUÉE D’INSECTES",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "La cible est attaquée par une nuée d’insectes qui brise sa concentration. La nuée a un rayon d’action de 1’’ centré sur la cible et elle se déplace avec elle. Toutes les figurines, y compris la cible, se trouvant totalement ou partiellement dans le rayon sont affectées et subissent les malus suivants : Combat -4, Tir -4 (jusqu’à un minimum de 0) et lancements de sorts -2.Après chaque activation de la figurine cible, elle peut effectuer un test de Volonté d’un SD égal au test de lancement. Le sort est annulé en cas de succès. Les autres figurines affectées peuvent simplement sortir du rayon d’action pour ne plus en subir les effets.Une figurine ne peut être affectée que par une seule nuée d’insectes à la fois (comme cible ou dans le rayon d’action).Les créatures bénéficiant du trait Grande cible, les morts-vivants et les golems sont immunisés à ce sort."
+      },
+      {
+        "title": "DÉCHIRURE ASTRALE",
+        "difficulty": 12,
+        "target": "Ligne de vue",
+        "description": "Le lanceur de sorts parvient à déchirer légèrement la trame de la réalité. Cette déchirure est douloureuse pour les humains et les créatures, et létale pour les démons. Le lanceur de sorts choisit un point cible. Toutes les figurines situées à 2’’ ou moins de ce point doivent réussir un test de Volonté d’un SD égal au test de lancement ou subir 2 points de dommages.Les démons qui ratent ce test de Volonté subissent autant de dommages que la valeur du test de lancement."
+      },
+      {
+        "title": "ARPENTEUR D’UNIVERS",
+        "difficulty": 10,
+        "target": "Lanceur",
+        "description": "Le lanceur peut ignorer tout élément de décor lors de son déplacement jusqu’à la fin du tour (marcher à travers les murs et franchir des gouffres par ex). Il ne peut pas être la cible d’une attaque, d’un tir ou d’un sort pendant ce tour et il ne sera pas considéré comme étant au combat. Il ne peut pas affecter les autres figurines ou les décors présents sur la table, ni ramasser de trésor. S’il en transportait déjà un, il le laisse tomber.Un lanceur de sorts qui tente de lancer Arpenteur d’univers lors de tours consécutifs subit les malus suivants : -5 au test de lancement au second tour consécutif, -10 au troisième tour consécutif, -15 à tous les tours consécutifs suivants."
+      },
+      {
+        "title": "POSSESSION",
+        "difficulty": 12,
+        "target": "Ligne de vue",
+        "description": "Ce sort ne peut être lancé que sur un membre temporaire ou permanent de l’expédition du lanceur de sorts, à l’exception du mage, de l’apprenti ou des démons. La cible est possédée par un démon et subit les modifications suivantes : Combat +2, Armure +1, Volonté -2, considérée comme un démon (affectée par les sorts Bannissement, Lien Démoniaque, Cercle de Protection, etc.).Cette figurine ne peut pas faire partie d’une activation de groupe. Si elle est retirée du jeu, quelle qu’en soit la raison, effectuez le test de survie dans les conditions habituelles (voir Mort et blessure, page 52).Un lanceur de sorts ne peut avoir qu’un sort de Possession actif à la fois."
+      },
+      {
+        "title": "INVOCATION DÉMONIAQUE",
+        "difficulty": 12,
+        "target": "Au contact",
+        "description": "Si ce sort est lancé avec succès, placez immédiatement un démon dans un rayon de 1’ du lanceur (mais pas directement au combat).Le démon est considéré comme s’il était sujet du sort Lien démoniaque lancé par le même lanceur de sorts (qui ne peut donc pas le lancer s’il contrôle déjà un autre démon).Le type de démon invoqué dépend du succès au test de lancement : 0 à 5 diablotin , 6 à 12 démon mineur , 13 ou plus démon majeur (page 120).Si le lanceur de sorts obtient un 1 à son test de lancement, un démon incontrôlé est placé au combat contre lui-même. Déterminer le type de démon : 1 à 10 diablotin, 11 à 17 démon mineur, 18 ou plus démon majeur. Un lanceur de sorts ne peut pas renforcer son sort s’il obtient 1 à son test, mais il n’a autrement pas de limite au renforcement (qui peut donc dépasser 18)."
+      }
+    ]
+  },
+  "THAUMATURGE": {
+    "title": "THAUMATURGE",
+    "spells": [
+      {
+        "title": "BANNISSEMENT",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Tous les démons en ligne de vue du lanceur de sorts doivent immédiatement faire un test de Volonté avec un SD égal au test de lancement. Un démon ayant une Volonté jusqu’à +4 qui rate ce test voit sa Santé réduite à 0 et il est retiré de la table. Un démon ayant une volonté de +5 ou plus subit autant de dommages que son échec au test de Volonté multiplié par trois."
+      },
+      {
+        "title": "LUMIÈRE AVEUGLANTE",
+        "difficulty": 8,
+        "target": "Ligne de vue",
+        "description": "Si le sort est lancé avec succès, la cible doit immédiatement effectuer un test de Volonté d’un SD égal au test de lancement. En cas d’échec, elle ne peut pas combattre, tirer ou lancer de sort de la catégorie Ligne de vue. Sa caractéristique de Combat est réduite à +0 et son Mouvement à 1.A la fin de chaque tour, la figurine peut tenter un nouveau test de Volonté avec le même SD. Le sort est annulé en cas de succès."
+      },
+      {
+        "title": "CERCLE DE PROTECTION",
+        "difficulty": 12,
+        "target": "Au contact",
+        "description": "Ce sort crée un cercle de 3’’ de diamètre autour du lanceur. Les démons et les mort- vivants ne peuvent pas y entrer ni le traverser. S’ils sont amenés au contact du cercle, ils s’arrêtent à son bord.Un lanceur de sorts ne peut avoir qu’un seul cercle de protection en jeu à la fois, mais il n’est pas obligé de rester à l’intérieur. Il peut annuler son sort à la fin de n’importe quel tour de jeu. Sinon, lancez un dé à la fin de chaque tour : le sort est annulé sur un résultat de 1 à 3."
+      },
+      {
+        "title": "DESTRUCTION DE MORTS-VIVANTS",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Si le sort est lancé avec succès, la créature mort-vivante ciblée doit effectuer un test de Volonté d’un SD égal au test de lancement du sort.Si le test est un échec et que la Volonté actuelle de la créature est au moins de +2, elle est immédiatement réduite à 0 de Santé et retirée du jeu. Si sa Volonté actuelle est de +3 ou plus, elle subit autant de dommages que la valeur de son échec multiplié par trois."
+      },
+      {
+        "title": "DISSIPATION",
+        "difficulty": 12,
+        "target": "Ligne de vue",
+        "description": "Ce sort annule immédiatement tous les effets d’un sort actif. Il ne peut pas bannir une créature invoquée, mais il peut annuler le contrôle d’une créature qui a rejoint temporairement une expédition."
+      },
+      {
+        "title": "SOINS",
+        "difficulty": 8,
+        "target": "Ligne de vue",
+        "description": "S’il est lancé avec succès, ce sort restaure jusqu’à 5 points de Santé perdus à une figurine située à 6’’ ou moins du lanceur. Ce sort ne permet pas à la cible de dépasser sa caractéristique de base de Santé, et il est sans effet sur les morts-vivants et les golems."
+      },
+      {
+        "title": "GUÉRISON MIRACULEUSE",
+        "difficulty": 16,
+        "target": "Hors du jeu (AP)",
+        "description": "Seul un mage peut lancer ce sort.Il permet de guérir toutes les Blessures permanentes d’une figurine, indépendamment du nombre de fois qu’elle a subi une même blessure.Il peut également être lancé sur une figurine Gravement blessée. En cas de succès, elle est guérie et peut participer à la prochaine partie sans pénalité.Ce sort peut aussi être utilisé pour ramener une figurine morte à la vie. La victime doit avoir trépassé lors de la partie qui vient de se terminer. Le sort subit alors un malus de -4 à son lancement. En cas de succès, la figurine revient à la vie et pourra participer à la prochaine partie sans pénalité.Lancer Guérison miraculeuse depuis un parchemin ne permet pas de ressusciter les morts."
+      },
+      {
+        "title": "BOUCLIER",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Si le sort est lancé avec succès, la cible reçoit un bonus d’Armure de +2 jusqu’à la fin de la partie. Notez que la règle de valeur d’armure maximale (page 26) s’applique néanmoins.Lancer ce sort plusieurs fois sur la même cible n’a pas d’effet."
+      }
+    ]
+  }
+}
