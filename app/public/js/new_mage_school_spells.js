@@ -6,12 +6,11 @@ var selected_components = new Set([]);
 
 Vue.component('spell-button', {
     data: function () {
-        return { selected: false, nonSelected: 'btn-light', Selected: 'btn-primary', Btn: 'btn'}
+        return { selected: false, nonSelected: 'btn-light', Selected: 'btn-primary', Btn: 'btn btn-block'}
     },
     props: ['spell_name'],
     template: '<button type="button" :class="[selected ? Selected : nonSelected, Btn]"  @click="clicked">{{ spell_name }}</button>',
     methods: {
-        // whenever question changes, this function will run
         clicked(event) {
             if(this.selected) {
                 this.selected = false;
