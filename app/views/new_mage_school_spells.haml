@@ -3,9 +3,8 @@
   .h2
     Choisissez trois sorts de l'école du mage
 
-  .row
-    .col-12
-      <spell-button v-for="spell in spells" :key="spell" v-bind:spell_name="spell">
-      </spell-button>
+  <spell-button v-for="spell in spells" :key="spell['title']" v-bind:spell_name="spell['title']"
+  v-bind:spell_content="'('+spell['difficulty']+') - '+spell['target']+' : '+spell['description']">
+  </spell-button>
 
   %input{ type: :hidden, id: :mage_type, value: mage_type}
