@@ -475,5 +475,58 @@
         "description": "Si le sort est lancé avec succès, la cible reçoit un bonus d’Armure de +2 jusqu’à la fin de la partie. Notez que la règle de valeur d’armure maximale (page 26) s’applique néanmoins.Lancer ce sort plusieurs fois sur la même cible n’a pas d’effet."
       }
     ]
+  },
+  "SORCIER": {
+    "title": "SORCIER",
+    "spells": [
+      {
+        "title": "INVOCATION D’ANIMAL",
+        "difficulty": 10,
+        "target": "Hors du jeu (AV)",
+        "description": "Le lanceur de sorts invoque un animal de son choix qui devient un membre permanent de son expédition parmi : ours (page 116), crapaud des glaces (page 116), léopard des neiges (page 116) ou loup (page 119).L’animal invoqué compte comme un soldat standard, mais il possède une volonté supérieure à celle de ses congénères sauvages et reçoit un bonus permanent de +3 à sa Volonté. Un lanceur de sorts ne peut avoir qu’un seul animal invoqué à la fois."
+      },
+      {
+        "title": "CONCOCTION DE POTION",
+        "difficulty": 12,
+        "target": "Hors du jeu (AV)",
+        "description": "Le lanceur de sorts crée une potion mineure de son choix (page 58) qui peut être vendue, conservée dans le repaire du mage ou donnée à un membre de l’expédition.Il est possible de créer une potion majeure (page 59), mais un apprenti n’est pas assez expérimenté et seul un mage peut tenter cet exploit. Le mage indique tout d’abord quelle potion majeure il souhaite réaliser puis il paie le coût des ingrédients. Il effectue ensuite son test de lancement avec un malus de -4. En cas de succès, la potion majeure est créée. En cas d’échec, la recette cuisinée n’a aucun effet et le coût des ingrédients est perdu."
+      },
+      {
+        "title": "CONTRÔLE D’UN ANIMAL",
+        "difficulty": 12,
+        "target": "Ligne de vue",
+        "description": "Si le sort est lancé avec succès, l’animal ciblé doit immédiatement effectuer un test de Volonté d’un SD égal au test de lancement du sort. En cas d’échec, l’animal devient un membre temporaire de l’expédition du lanceur. Le contrôle dure jusqu’à la fin de la partie ou jusqu’à ce que le sort soit annulé.Le lanceur de sorts peut utiliser une action pour annuler son sort et il ne peut contrôler qu’un seul animal à la fois."
+      },
+      {
+        "title": "MALÉDICTION",
+        "difficulty": 8,
+        "target": "Ligne de vue",
+        "description": "Si le sort est lancé avec succès, la cible subit un malus de -2 à tous ses jets de dés. A la fin de chaque tour, la cible peut tenter un test de Volonté d’un SD égal au test de lancement du sort (en appliquant le -2 de la Malédiction). Le sort est annulé en cas de succès.Malédiction ne peut pas être lancé sur une figurine déjà sous les effets du sort Malédiction."
+      },
+      {
+        "title": "FAMILIER",
+        "difficulty": 10,
+        "target": "Hors du jeu (AV)",
+        "description": "Le lanceur de sorts fait apparaitre un familier de son choix, qui peut prendre la forme de n’importe quelle petite créature. Le familier n’est pas représenté sur la table, à moins que le joueur souhaite l’inclure sur sa figurine.Un lanceur de sorts accompagné d’un familier gagne un bonus de +2 à sa Santé (inscrivez-le comme une caractéristique double). Si le lanceur de sorts voit sa Santé réduite à 1 ou moins, le familier est détruit. Au début de la prochaine partie, le lanceur de sorts retrouve sa Santé habituelle, à moins qu’il ait invoqué un nouveau familier."
+      },
+      {
+        "title": "BROUILLARD",
+        "difficulty": 8,
+        "target": "Ligne de vue",
+        "description": "Placez une nappe de brouillard de 6’’ de long, 3’’ de haut et 1’’ d’épaisseur, à 24’’ ou moins du lanceur. Elle peut être placée n’importe où tant qu’une partie est dans la ligne de vue du lanceur. Les figurines peuvent se déplacer sans pénalité dans le brouillard mais aucune ligne de vue ne peut le traverser.Lancez un dé au début de chaque tour consécutif au lancement. Sur un résultat de 1 à 4, le brouillard se dissipe et il est retiré de la table."
+      },
+      {
+        "title": "BOURBIER",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Le sol, dans un rayon de 3’’ d’un point ciblé par le lanceur, devient une zone accidentée jusqu’à la fin de la partie."
+      },
+      {
+        "title": "TRAIT EMPOISONNÉ",
+        "difficulty": 10,
+        "target": "Ligne de vue",
+        "description": "Si le sort est lancé avec succès, effectuez immédiatement une attaque de tir empoisonné +3 contre la cible. Cette attaque n’est pas magique."
+      }
+    ]
   }
 }

@@ -18,6 +18,8 @@ File.open('spells.txt').readlines.each do |line|
     end
 
     spell_book[spells[:title]] = spells
+    puts("Adding #{spells[:title]}")
+
     spells = {}
     current_spell = {}
     status = :waiting
@@ -38,6 +40,6 @@ File.open('spells.txt').readlines.each do |line|
   end
 end
 
-File.open('spells.json', 'w') do |f|
+File.open('html/spells.json', 'w') do |f|
   f.puts JSON.pretty_generate(spell_book)
 end

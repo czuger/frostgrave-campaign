@@ -262,3 +262,4 @@ BOURBIER Sorcier / 10 / Ligne de vue
 Le sol, dans un rayon de 3’’ d’un point ciblé par le lanceur, devient une zone accidentée jusqu’à la fin de la partie.
 TRAIT EMPOISONNÉ Sorcier / 10 / Ligne de vue
 Si le sort est lancé avec succès, effectuez immédiatement une attaque de tir empoisonné +3 contre la cible. Cette attaque n’est pas magique.
+

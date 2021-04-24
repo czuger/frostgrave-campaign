@@ -1,0 +1,26 @@
+{
+  "CHRONOMANCIEN": {
+    "title": "CHRONOMANCIEN",
+    "aligned": ["NÉCROMANT", "DEVIN", "ÉLÉMENTALISTE"],
+    "neutral": ["THAUMATURGE", "INVOCATEUR", "ILLUSIONNISTE", "SORCIER", "CRYPTOMANCIEN"],
+    "opposed": ["ENCHANTEUR"],
+  },
+  "CRYPTOMANCIEN": {
+    "title": "CRYPTOMANCIEN",
+    "aligned": ["THAUMATURGE", "ILLUSIONNISTE", "ENCHANTEUR"],
+    "neutral": ["ÉLÉMENTALISTE", "NÉCROMANT", "SORCIER", "CHRONOMANCIEN", "DEVIN"],
+    "opposed": ["INVOCATEUR"],
+  },
+  "DEVIN": {
+    "title": "DEVIN",
+    "aligned": ["THAUMATURGE", "ILLUSIONNISTE", "CHRONOMANCIEN"],
+    "neutral": ["ÉLÉMENTALISTE", "ENCHANTEUR", "NÉCROMANT", "CRYPTOMANCIEN", "INVOCATEUR"],
+    "opposed": ["SORCIER"],
+  },
+  "ÉLÉMENTALISTE": {
+    "title": "ÉLÉMENTALISTE",
+    "aligned": ["INVOCATEUR", "ENCHANTEUR", "CHRONOMANCIEN"],
+    "neutral": ["THAUMATURGE", "DEVIN", "CRYPTOMANCIEN", "SORCIER", "NÉCROMANT"],
+    "opposed": ["ILLUSIONNISTE"],
+  }
+}
