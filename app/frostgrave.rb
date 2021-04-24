@@ -5,5 +5,5 @@ get '/' do
 end
 
 get '/create' do
-  haml :create
+  haml :new_mage_create
 end

@@ -5,8 +5,10 @@
 // L'objet est ajouté à une instance de Vue
 new Vue({
     el: '#wizard-choice',
-    data: { wiz_types: [] },
+    data: { wiz_types: [], name: null },
     mounted: function () {
+        this.name = name_gen();
+
         axios
             .get('/wizards.json')
             .then(response => {

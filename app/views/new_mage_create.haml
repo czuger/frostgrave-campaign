@@ -3,6 +3,10 @@
   .h1
     Choisissez un type de mage
 
+
+  %label.form-label{:for => "wizard_name"} Nom du mage
+  %input#wizard_name.form-control{ 'v-model' => 'name' }
+
   .row
     .d-grid.gap-2.gy-2
       <button type="button" class="btn btn-primary" v-for="wiz in wiz_types" :key="wiz">
