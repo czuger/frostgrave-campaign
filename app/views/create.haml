@@ -1,0 +1,11 @@
+#wizard-choice
+
+  .h1
+    Choisissez un type de mage
+
+  .row
+    .d-grid.gap-2.gy-2
+      <button type="button" class="btn btn-primary" v-for="wiz in wiz_types" :key="wiz">
+      {{ wiz }}
+      </button>
+
