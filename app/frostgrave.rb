@@ -15,5 +15,5 @@ get '/new_mage_school_spells' do
 end
 
 get '/new_mage_aligned_spells' do
-  p :foo
+  haml :new_mage_aligned_spells, :locals => {mage_type: params[:mage_type], mage_name: params[:mage_name]}
 end

@@ -1,0 +1,36 @@
+#wizard-choose-spells
+
+  .h2
+    Choisissez un sort par école alignée du mage
+
+  <spell-button v-for="spell in aligned_spells_1" :key="spell['title']" v-bind:spell_name="spell['title']"
+  v-bind:spell_content="'('+spell['difficulty']+') - '+spell['target']+' : '+spell['description']"
+  aligned-spells-code="a">
+  </spell-button>
+
+  %hr
+
+  <spell-button v-for="spell in aligned_spells_2" :key="spell['title']" v-bind:spell_name="spell['title']"
+  v-bind:spell_content="'('+spell['difficulty']+') - '+spell['target']+' : '+spell['description']"
+  aligned-spells-code="b">
+  </spell-button>
+
+  %hr
+
+  <spell-button v-for="spell in aligned_spells_3" :key="spell['title']" v-bind:spell_name="spell['title']"
+  v-bind:spell_content="'('+spell['difficulty']+') - '+spell['target']+' : '+spell['description']"
+  aligned-spells-code="c">
+  </spell-button>
+
+
+  <div class="row mt-2">
+  <div class="col-9">
+  <button type="button" class="btn btn-primary btn-block" :disabled="!can_validate" v-on:click="validate">Valider</button>
+  </div>
+  </div>
+
+  %input{ type: :hidden, id: :mage_name, value: mage_name}
+  %input{ type: :hidden, id: :mage_type, value: mage_type}
+
+= haml :common_js
+%script{ type: 'application/javascript', :src => '/js/new_mage_aligned_spells.js'}

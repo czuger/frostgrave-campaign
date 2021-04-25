@@ -79,10 +79,11 @@ var school_spells = new Vue({
     },
     methods: {
         validate: function() {
+            const mage_type = $('#mage_type').val();
             const mage_name = $('#mage_name').val();
 
             LsManager.set_value(mage_name, 'spells', Array.from(selected_components));
-            window.location.href = "new_mage_aligned_spells";
+            window.location.href = "new_mage_aligned_spells?mage_name="+mage_name+"&mage_type="+mage_type;
         }
     }
 });
