@@ -73,15 +73,16 @@ var aligned_spells = new Vue({
                         this.aligned_spells_1 = this.spells_list[this.wizards[this.mage_type]['aligned'][0]]['spells'];
                         this.aligned_spells_2 = this.spells_list[this.wizards[this.mage_type]['aligned'][1]]['spells'];
                         this.aligned_spells_3 = this.spells_list[this.wizards[this.mage_type]['aligned'][2]]['spells'];
+
+                        this.$nextTick()
+                            .then(function () {
+                                // DOM updated
+                                $('[data-toggle="popover"]').popover({
+                                    trigger: 'focus'
+                                });
+                            });
                     });
             });
-
-        this.$nextTick(() => {
-            // Fires before full page is rendered
-            $('[data-toggle="popover"]').popover({
-                trigger: 'focus'
-            });
-        });
     },
     methods: {
         validate: function() {
@@ -97,3 +98,11 @@ var aligned_spells = new Vue({
         }
     }
 });
+
+Vue.nextTick()
+    .then(function () {
+        // DOM updated
+        $('[data-toggle="popover"]').popover({
+            trigger: 'focus'
+        });
+    });
