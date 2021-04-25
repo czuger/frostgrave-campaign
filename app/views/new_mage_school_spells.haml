@@ -7,7 +7,14 @@
   v-bind:spell_content="'('+spell['difficulty']+') - '+spell['target']+' : '+spell['description']">
   </spell-button>
 
+  <div class="row mt-2">
+  <div class="col-9">
+  <button type="button" class="btn btn-primary btn-block" :disabled="!can_validate">Valider</button>
+  </div>
+  </div>
+
   %input{ type: :hidden, id: :mage_type, value: mage_type}
+  %input{ type: :hidden, id: :mage_name, value: mage_name}
 
 = haml :common_js
 %script{ type: 'application/javascript', :src => '/js/new_mage_school_spells.js'}

@@ -33,6 +33,14 @@ Vue.component('spell-button', {
                 }
             }
 
+            if(selected_components.size === 3){
+                school_spells.can_validate = true;
+            }
+            else
+            {
+                school_spells.can_validate = false;
+            }
+
             console.log(selected_components);
         }
     }
@@ -40,9 +48,9 @@ Vue.component('spell-button', {
 
 
 // L'objet est ajouté à une instance de Vue
-new Vue({
+var school_spells = new Vue({
     el: '#wizard-choose-spells',
-    data: { spells: [] },
+    data: { spells: [], can_validate: false},
     mounted: function () {
         this.name = name_gen();
 
@@ -51,6 +59,10 @@ new Vue({
             .then(response => {
                 const result = response.data;
                 const mage_type = $('#mage_type').val();
+                const mage_name = $('#mage_name').val();
+
+                LsManager.set_value(mage_name, 'type', mage_type);
+                LsManager.set_value(mage_name, 'name', mage_name);
 
                 for (const spell of result[mage_type]['spells']) {
                     this.spells.push(spell);
