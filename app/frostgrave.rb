@@ -1,5 +1,7 @@
 require 'sinatra'
 
+puts "This is process #{Process.pid}"
+
 get '/' do
   haml :index
 end
