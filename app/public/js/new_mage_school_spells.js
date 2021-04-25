@@ -76,4 +76,13 @@ var school_spells = new Vue({
             });
         });
     });
-}});
+    },
+    methods: {
+        validate: function() {
+            const mage_name = $('#mage_name').val();
+
+            LsManager.set_value(mage_name, 'spells', Array.from(selected_components));
+            window.location.href = "new_mage_aligned_spells";
+        }
+    }
+});
