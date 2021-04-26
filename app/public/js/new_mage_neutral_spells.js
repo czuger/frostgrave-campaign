@@ -7,7 +7,7 @@ Vue.component('spell-button', {
     data: function () {
         return { selected: false, nonSelected: 'btn-light', Selected: 'btn-primary', Btn: 'btn btn-block'}
     },
-    props: ['spell_name', 'spell_content', 'alignedSpellsCode'],
+    props: ['spell_name', 'spell_content', 'neutralSpellsCode'],
     template: `
         <div class="row mt-2">
         <div class="col-9">
@@ -20,30 +20,32 @@ Vue.component('spell-button', {
     `,
     methods: {
         select(event) {
-            console.log(this.alignedSpellsCode);
-            console.log(aligned_spells.selected_aligned[this.alignedSpellsCode]);
-
             if(this.selected) {
                 this.selected = false;
-                aligned_spells.selected_aligned[this.alignedSpellsCode] = false;
+                neutral_spells.selected_neutral[this.neutralSpellsCode] = false;
             }
             else{
-                if(!aligned_spells.selected_aligned[this.alignedSpellsCode]){
+                if(!neutral_spells.selected_neutral[this.neutralSpellsCode] && neutral_spells.spells_count < 2){
                     this.selected = true;
-                    aligned_spells.selected_aligned[this.alignedSpellsCode]=this.spell_name;
+                    neutral_spells.selected_neutral[this.neutralSpellsCode]=this.spell_name;
                 }
             }
 
-            console.log(aligned_spells.selected_aligned['a'] && aligned_spells.selected_aligned['b'] &&
-                aligned_spells.selected_aligned['c']);
+            neutral_spells.spells_count = 0;
+            for(_select in neutral_spells.selected_neutral){
+                console.log(neutral_spells.selected_neutral[_select]);
+                if(neutral_spells.selected_neutral[_select]){
+                    neutral_spells.spells_count += 1;
+                }
+            }
 
-            if(aligned_spells.selected_aligned['a'] && aligned_spells.selected_aligned['b'] &&
-                aligned_spells.selected_aligned['c']){
-                aligned_spells.can_validate = true;
+
+            if(neutral_spells.spells_count >= 2){
+                neutral_spells.can_validate = true;
             }
             else
             {
-                aligned_spells.can_validate = false;
+                neutral_spells.can_validate = false;
             }
         }
     }
@@ -51,11 +53,11 @@ Vue.component('spell-button', {
 
 
 // L'objet est ajouté à une instance de Vue
-var aligned_spells = new Vue({
+var neutral_spells = new Vue({
     el: '#wizard-choose-spells',
-    data: { aligned_spells_1: [], aligned_spells_2: [], aligned_spells_3: [],
-            selected_aligned: { 'a': null, 'b': null, 'c': null },
-            can_validate: false, spells_list: null,
+    data: { neutral_spells_1: [], neutral_spells_2: [], neutral_spells_3: [], neutral_spells_4: [], neutral_spells_5: [],
+            selected_neutral: { 'a': null, 'b': null, 'c': null, 'd': null, 'e': null },
+            can_validate: false, spells_list: null, spells_count: 0,
             mage_type: null, mage_name: null, wizards: null},
     mounted: function () {
         axios
@@ -70,9 +72,11 @@ var aligned_spells = new Vue({
                     .then(response => {
                         this.wizards = response.data;
 
-                        this.aligned_spells_1 = this.spells_list[this.wizards[this.mage_type]['aligned'][0]]['spells'];
-                        this.aligned_spells_2 = this.spells_list[this.wizards[this.mage_type]['aligned'][1]]['spells'];
-                        this.aligned_spells_3 = this.spells_list[this.wizards[this.mage_type]['aligned'][2]]['spells'];
+                        this.neutral_spells_1 = this.spells_list[this.wizards[this.mage_type]['neutral'][0]]['spells'];
+                        this.neutral_spells_2 = this.spells_list[this.wizards[this.mage_type]['neutral'][1]]['spells'];
+                        this.neutral_spells_3 = this.spells_list[this.wizards[this.mage_type]['neutral'][2]]['spells'];
+                        this.neutral_spells_4 = this.spells_list[this.wizards[this.mage_type]['neutral'][3]]['spells'];
+                        this.neutral_spells_5 = this.spells_list[this.wizards[this.mage_type]['neutral'][4]]['spells'];
 
                         this.$nextTick()
                             .then(function () {
@@ -86,16 +90,18 @@ var aligned_spells = new Vue({
     },
     methods: {
         validate: function() {
-            const mage_type = $('#mage_type').val();
             const mage_name = $('#mage_name').val();
 
             let spells = LsManager.get_value(mage_name, 'spells');
-            spells.push(aligned_spells.selected_aligned['a']);
-            spells.push(aligned_spells.selected_aligned['b']);
-            spells.push(aligned_spells.selected_aligned['c']);
+
+            for(_select in neutral_spells.selected_neutral){
+                if(neutral_spells.selected_neutral[_select]){
+                    spells.push(neutral_spells.selected_neutral[_select]);
+                }
+            }
 
             LsManager.set_value(mage_name, 'spells', spells);
-            window.location.href = "new_mage_neutral_spells?mage_name="+mage_name+"&mage_type="+mage_type;
+            // window.location.href = "new_mage_neutral_spells";
         }
     }
 });

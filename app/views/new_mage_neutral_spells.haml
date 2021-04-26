@@ -1,0 +1,49 @@
+#wizard-choose-spells
+
+  .h2
+    Choisissez deux sorts parmis les écoles neutres du mage.
+
+  <spell-button v-for="spell in neutral_spells_1" :key="spell['title']" v-bind:spell_name="spell['title']"
+  v-bind:spell_content="'('+spell['difficulty']+') - '+spell['target']+' : '+spell['description']"
+  neutral-spells-code="a">
+  </spell-button>
+
+  %hr
+
+  <spell-button v-for="spell in neutral_spells_2" :key="spell['title']" v-bind:spell_name="spell['title']"
+  v-bind:spell_content="'('+spell['difficulty']+') - '+spell['target']+' : '+spell['description']"
+  neutral-spells-code="b">
+  </spell-button>
+
+  %hr
+
+  <spell-button v-for="spell in neutral_spells_3" :key="spell['title']" v-bind:spell_name="spell['title']"
+  v-bind:spell_content="'('+spell['difficulty']+') - '+spell['target']+' : '+spell['description']"
+  neutral-spells-code="c">
+  </spell-button>
+
+  %hr
+
+  <spell-button v-for="spell in neutral_spells_4" :key="spell['title']" v-bind:spell_name="spell['title']"
+  v-bind:spell_content="'('+spell['difficulty']+') - '+spell['target']+' : '+spell['description']"
+  neutral-spells-code="d">
+  </spell-button>
+
+  %hr
+
+  <spell-button v-for="spell in neutral_spells_5" :key="spell['title']" v-bind:spell_name="spell['title']"
+  v-bind:spell_content="'('+spell['difficulty']+') - '+spell['target']+' : '+spell['description']"
+  neutral-spells-code="e">
+  </spell-button>
+
+  <div class="row mt-2">
+  <div class="col-9">
+  <button type="button" class="btn btn-primary btn-block" :disabled="!can_validate" v-on:click="validate">Valider</button>
+  </div>
+  </div>
+
+  %input{ type: :hidden, id: :mage_name, value: mage_name}
+  %input{ type: :hidden, id: :mage_type, value: mage_type}
+
+= haml :common_js
+%script{ type: 'application/javascript', :src => '/js/new_mage_neutral_spells.js'}
