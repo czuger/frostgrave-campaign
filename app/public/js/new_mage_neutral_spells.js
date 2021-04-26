@@ -101,7 +101,7 @@ var neutral_spells = new Vue({
             }
 
             LsManager.set_value(mage_name, 'spells', spells);
-            // window.location.href = "new_mage_neutral_spells";
+            window.location.href = "show_mage_spells?mage_name="+mage_name+"&mage_type="+mage_type;
         }
     }
 });

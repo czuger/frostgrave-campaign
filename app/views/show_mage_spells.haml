@@ -1,0 +1,25 @@
+#mage-spells
+
+  .h1
+    Spellbook
+
+  .h2
+    = mage_name
+
+  .spells-frame.mt-1{ 'v-for' => 'spell in spells' }
+    .row.mb-3
+      .col-6
+        {{ spell.title }}
+      .col-1
+        {{ spell.difficulty }}
+      .col-5
+        {{ spell.target }}
+    .row
+      .col-12
+        {{ spell.description }}
+
+
+  %input{ type: :hidden, id: :mage_name, value: mage_name}
+
+= haml :common_js
+%script{ type: 'application/javascript', :src => '/js/show_mage_spells.js'}

@@ -1,6 +1,8 @@
 require 'sinatra'
 
-puts "This is process #{Process.pid}"
+File.open('frostgrave.pid', 'w') do |f|
+  f.puts Process.pid
+end
 
 get '/' do
   haml :index
@@ -20,4 +22,8 @@ end
 
 get '/new_mage_neutral_spells' do
   haml :new_mage_neutral_spells, :locals => {mage_type: params[:mage_type], mage_name: params[:mage_name]}
+end
+
+get '/show_mage_spells' do
+  haml :show_mage_spells, :locals => {mage_type: params[:mage_type], mage_name: params[:mage_name]}
 end
