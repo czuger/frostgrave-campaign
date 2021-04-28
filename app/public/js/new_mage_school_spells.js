@@ -2,8 +2,7 @@
  * Created by cedric on 24/04/2021.
  */
 
-var selected_components = new Set([]);
-var spells_items = {};
+var mage_manager = new MageManager();
 
 Vue.component('spell-button', {
     data: function () {
@@ -61,20 +60,20 @@ var school_spells = new Vue({
                 const mage_type = $('#mage_type').val();
                 const mage_name = $('#mage_name').val();
 
-                LsManager.set_value(mage_name, 'type', mage_type);
-                LsManager.set_value(mage_name, 'name', mage_name);
+                mage_manager.set_mage_info(mage_name, mage_type);
+                mage_manager.set_spells(result);
 
-                for (const spell of result[mage_type]['spells']) {
-                    this.spells.push(spell);
-                    spells_items[spell['title']]=spell;
-                }
+                // for (const spell of result[mage_type]['spells']) {
+                //     this.spells.push(spell);
+                //     spells_items[spell['title']]=spell;
+                // }
 
-        this.$nextTick(() => {
-            // Fires before full page is rendered
-            $('[data-toggle="popover"]').popover({
-                trigger: 'focus'
-            });
-        });
+                this.$nextTick(() => {
+                    // Fires before full page is rendered
+                    $('[data-toggle="popover"]').popover({
+                        trigger: 'focus'
+                    });
+                });
     });
     },
     methods: {
