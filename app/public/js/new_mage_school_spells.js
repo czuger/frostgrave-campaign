@@ -8,7 +8,7 @@ Vue.component('spell-button', {
     data: function () {
         return { selected: false, nonSelected: 'btn-light', Selected: 'btn-primary', Btn: 'btn btn-block'}
     },
-    props: ['spell_name', 'spell_content'],
+    props: ['spell_name', 'spell_content', 'spell_level'],
     template: `
         <div class="row mt-2">
         <div class="col-9">
@@ -23,16 +23,16 @@ Vue.component('spell-button', {
         select(event) {
             if(this.selected) {
                 this.selected = false;
-                selected_components.delete(this.spell_name);
+                mage_manager.remove_spell(this.spell_name);
             }
             else{
-                if(selected_components.size <3){
+                if(mage_manager.spells_amount() <3){
                     this.selected = true;
-                    selected_components.add(this.spell_name);
+                    mage_manager.choose_spell(mage_manager.school, this.spell_name, this.spell_level);
                 }
             }
 
-            if(selected_components.size === 3){
+            if(mage_manager.spells_amount() === 3){
                 school_spells.can_validate = true;
             }
             else
@@ -40,7 +40,7 @@ Vue.component('spell-button', {
                 school_spells.can_validate = false;
             }
 
-            console.log(selected_components);
+            console.log(mage_manager.mage_spells);
         }
     }
 });
@@ -57,16 +57,11 @@ var school_spells = new Vue({
             .get('/spells.json')
             .then(response => {
                 const result = response.data;
-                const mage_type = $('#mage_type').val();
-                const mage_name = $('#mage_name').val();
 
-                mage_manager.set_mage_info(mage_name, mage_type);
+                mage_manager.set_mage_info_from_dom();
                 mage_manager.set_spells(result);
 
-                // for (const spell of result[mage_type]['spells']) {
-                //     this.spells.push(spell);
-                //     spells_items[spell['title']]=spell;
-                // }
+                this.spells = mage_manager.get_mage_school_spells();
 
                 this.$nextTick(() => {
                     // Fires before full page is rendered
@@ -78,10 +73,7 @@ var school_spells = new Vue({
     },
     methods: {
         validate: function() {
-            const mage_type = $('#mage_type').val();
-            const mage_name = $('#mage_name').val();
-
-            LsManager.set_value(mage_name, 'spells', Array.from(selected_components));
+            mage_manager.save();
             window.location.href = "new_mage_aligned_spells?mage_name="+mage_name+"&mage_type="+mage_type;
         }
     }
