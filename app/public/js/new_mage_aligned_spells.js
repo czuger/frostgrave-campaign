@@ -3,6 +3,8 @@
  */
 
 
+var mage_manager = new MageManager();
+
 Vue.component('spell-button', {
     data: function () {
         return { selected: false, nonSelected: 'btn-light', Selected: 'btn-primary', Btn: 'btn btn-block'}
@@ -55,24 +57,20 @@ var aligned_spells = new Vue({
     el: '#wizard-choose-spells',
     data: { aligned_spells_1: [], aligned_spells_2: [], aligned_spells_3: [],
             selected_aligned: { 'a': null, 'b': null, 'c': null },
-            can_validate: false, spells_list: null,
-            mage_type: null, mage_name: null, wizards: null},
+            can_validate: false },
     mounted: function () {
         axios
             .get('/spells.json')
             .then(response => {
-                this.spells_list = response.data;
-                this.mage_type = $('#mage_type').val();
-                this.mage_name = $('#mage_name').val();
+                mage_manager.set_mage_info_from_dom();
+                mage_manager.set_spells(response.data);
 
                 axios
                     .get('/wizards.json')
                     .then(response => {
-                        this.wizards = response.data;
+                        mage_manager.set_wizards(response.data);
 
-                        this.aligned_spells_1 = this.spells_list[this.wizards[this.mage_type]['aligned'][0]]['spells'];
-                        this.aligned_spells_2 = this.spells_list[this.wizards[this.mage_type]['aligned'][1]]['spells'];
-                        this.aligned_spells_3 = this.spells_list[this.wizards[this.mage_type]['aligned'][2]]['spells'];
+                        [this.aligned_spells_1, this.aligned_spells_2, this.aligned_spells_3] = mage_manager.get_aligned_spells_names();
 
                         this.$nextTick()
                             .then(function () {

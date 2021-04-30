@@ -19,6 +19,12 @@ class MageManager{
         this.all_spells = _spells;
     }
 
+    // Set the wizard school list
+    set_wizards(_schools){
+        this.all_wizards_school = _schools;
+    }
+
+    // Count the current amount of spells in the wizard spellbook
     spells_amount(){
         return Object.keys(this.mage_spells).length;
     }
@@ -43,10 +49,22 @@ class MageManager{
         let spells = [];
 
         for (const spell of this.get_school_spells(this.school)) {
+            if(this.mage_spells[spell.title]){
+                spell.selected = true;
+            }
             spells.push(spell);
         }
 
         return spells;
+    }
+
+    // Return all spells names for the aligned schools
+    get_aligned_spells_names(){
+        return [
+            this.all_spells[this.all_wizards_school[this.school]['aligned'][0]]['spells'],
+            this.all_spells[this.all_wizards_school[this.school]['aligned'][1]]['spells'],
+            this.all_spells[this.all_wizards_school[this.school]['aligned'][2]]['spells']
+        ];
     }
 
     // Save the data
@@ -55,6 +73,21 @@ class MageManager{
             LsManager.set_value(this.name, 'name', this.name);
             LsManager.set_value(this.name, 'school', this.school);
             LsManager.set_value(this.name, 'spells', this.mage_spells);
+        }
+    }
+
+    // Load the data
+    load(name){
+        this.name = name;
+
+        const school = LsManager.get_value(name, 'school');
+        if(school){
+            this.school = school;
+        }
+
+        const spells = LsManager.get_value(name, 'spells');
+        if(spells){
+            this.mage_spells = spells;
         }
     }
 }

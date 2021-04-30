@@ -6,9 +6,9 @@ var mage_manager = new MageManager();
 
 Vue.component('spell-button', {
     data: function () {
-        return { selected: false, nonSelected: 'btn-light', Selected: 'btn-primary', Btn: 'btn btn-block'}
+        return { nonSelected: 'btn-light', Selected: 'btn-primary', Btn: 'btn btn-block'}
     },
-    props: ['spell_name', 'spell_content', 'spell_level'],
+    props: ['spell_name', 'spell_content', 'spell_level', 'from_disk', 'selected', ],
     template: `
         <div class="row mt-2">
         <div class="col-9">
@@ -40,7 +40,7 @@ Vue.component('spell-button', {
                 school_spells.can_validate = false;
             }
 
-            console.log(mage_manager.mage_spells);
+            console.log(mage_manager);
         }
     }
 });
@@ -59,6 +59,7 @@ var school_spells = new Vue({
                 const result = response.data;
 
                 mage_manager.set_mage_info_from_dom();
+                mage_manager.load(mage_manager.name);
                 mage_manager.set_spells(result);
 
                 this.spells = mage_manager.get_mage_school_spells();
@@ -74,7 +75,7 @@ var school_spells = new Vue({
     methods: {
         validate: function() {
             mage_manager.save();
-            window.location.href = "new_mage_aligned_spells?mage_name="+mage_name+"&mage_type="+mage_type;
+            window.location.href = "new_mage_aligned_spells?mage_name="+mage_manager.name+"&mage_type="+mage_manager.school;
         }
     }
 });
