@@ -22,12 +22,9 @@ Vue.component('spell-button', {
     `,
     methods: {
         select(event) {
-            console.log(this.alignedSpellsCode);
-            console.log(aligned_spells.selected_aligned[this.alignedSpellsCode]);
-
             if(this.selected) {
                 this.selected = false;
-                aligned_spells.selected_aligned[this.alignedSpellsCode] = false;
+                mage_manager.remove_spell(this.alignedSpellsCode);
             }
             else{
                 if(!aligned_spells.selected_aligned[this.alignedSpellsCode]){
@@ -70,7 +67,9 @@ var aligned_spells = new Vue({
                     .then(response => {
                         mage_manager.set_wizards(response.data);
 
-                        [this.aligned_spells_1, this.aligned_spells_2, this.aligned_spells_3] = mage_manager.get_aligned_spells_names();
+                        const [a1, a2, a3] = mage_manager.get_aligned_spells_names();
+                        [this.aligned_spells_1, this.aligned_spells_2, this.aligned_spells_3] = [a1, a2, a3];
+
 
                         this.$nextTick()
                             .then(function () {
