@@ -63,6 +63,9 @@ var school_spells = new Vue({
                 mage_manager.set_spells(result);
 
                 this.spells = mage_manager.get_mage_school_spells();
+                if(this.spells.length >= 3){
+                    this.can_validate = true;
+                }
 
                 this.$nextTick(() => {
                     // Fires before full page is rendered
