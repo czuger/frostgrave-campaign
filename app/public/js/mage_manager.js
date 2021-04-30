@@ -50,7 +50,7 @@ class MageManager{
 
         for (const spell of this.get_school_spells(this.school)) {
             if(this.mage_spells[spell.title]){
-                spell.selected = true;
+                spell.selected_saved_state = true;
             }
             spells.push(spell);
         }

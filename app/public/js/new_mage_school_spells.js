@@ -6,9 +6,9 @@ var mage_manager = new MageManager();
 
 Vue.component('spell-button', {
     data: function () {
-        return { nonSelected: 'btn-light', Selected: 'btn-primary', Btn: 'btn btn-block'}
+        return { selected: this.selected_saved_state, nonSelected: 'btn-light', Selected: 'btn-primary', Btn: 'btn btn-block'}
     },
-    props: ['spell_name', 'spell_content', 'spell_level', 'from_disk', 'selected', ],
+    props: ['spell_name', 'spell_content', 'spell_level', 'from_disk', 'selected_saved_state', ],
     template: `
         <div class="row mt-2">
         <div class="col-9">
