@@ -1,4 +1,9 @@
 require 'sinatra'
+require_relative 'libs/name_generator/name_gen'
+
+get '/name' do
+  gen_name(params['sex'], params['title'])
+end
 
 get '/' do
   haml :index

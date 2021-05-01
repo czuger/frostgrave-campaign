@@ -1,13 +1,24 @@
-require 'open-uri'
-require 'nokogiri'
+require_relative 'title_gen'
+require_relative 'mage_name'
 
-doc = Nokogiri.HTML(open('https://www.fantasynamegenerators.com/wizard-names.php'))
+def gen_name(sex, title)
+  sex = (sex == 'female' ? :female : :male)
+  title = (title == 'true')
 
-p doc.at_css('[id="nameGen"]')
-# inline_script = doc.xpath('//script[not(@src)]')
-# inline_script.each do |script|
-#   puts "-"*50, script.text
-# end
+  # For now sex and title are random
+
+  sex = (rand(1..3) == 1 ? :female : :male)
+  title = (rand(1..5) == 1)
+
+  name = MageName.new.gen(sex)
+
+  name = add_title(name, sex) if title
+
+  name
+end
+
+# p gen_name(:male, true)
+
 
 # https://www.fantasynamegenerators.com/wizard-names.php
 # https://www.fantasynamegenerators.com/demon_names.php

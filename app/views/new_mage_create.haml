@@ -5,7 +5,11 @@
 
 
   %label.form-label{:for => "wizard_name"} Nom du mage
-  %input#wizard_name.form-control{ 'v-model' => 'name' }
+  -#%button.btn.btn-primary.btn-sm
+  -#  Nom du mage
+  -#%input{ 'data-size' => 'sm', 'data-toggle' => 'toggle', type: 'checkbox', 'data-on' => 'Femme', 'data-off' => 'Homme', 'data-offstyle' => 'outline-primary'}
+  -#%input{ 'data-size' => 'sm', 'data-toggle' => 'toggle', type: 'checkbox', 'data-on' => 'Titre', 'data-off' => 'Normal', 'data-offstyle' => 'outline-primary'}
+  %input#wizard_name.mt-1.form-control{ 'v-model' => 'name' }
 
   .row.mt-3
     .col-12
