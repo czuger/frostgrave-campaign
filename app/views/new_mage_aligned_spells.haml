@@ -5,21 +5,21 @@
 
   <spell-button v-for="spell in aligned_spells_1" :key="spell['title']" v-bind:spell_name="spell['title']"
   v-bind:spell_content="'('+spell['difficulty']+') - '+spell['target']+' : '+spell['description']"
-  aligned-spells-code="a">
+  aligned-spells-code="school1" :spell_level="spell['difficulty']">
   </spell-button>
 
   %hr
 
   <spell-button v-for="spell in aligned_spells_2" :key="spell['title']" v-bind:spell_name="spell['title']"
   v-bind:spell_content="'('+spell['difficulty']+') - '+spell['target']+' : '+spell['description']"
-  aligned-spells-code="b">
+  aligned-spells-code="school2" :spell_level="spell['difficulty']">
   </spell-button>
 
   %hr
 
   <spell-button v-for="spell in aligned_spells_3" :key="spell['title']" v-bind:spell_name="spell['title']"
   v-bind:spell_content="'('+spell['difficulty']+') - '+spell['target']+' : '+spell['description']"
-  aligned-spells-code="c">
+  aligned-spells-code="school3" :spell_level="spell['difficulty']">
   </spell-button>
 
 

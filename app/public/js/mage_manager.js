@@ -58,15 +58,6 @@ class MageManager{
         return spells;
     }
 
-    // Return all spells names for the aligned schools
-    get_aligned_spells_names(){
-        return [
-            this.all_spells[this.all_wizards_school[this.school]['aligned'][0]]['spells'],
-            this.all_spells[this.all_wizards_school[this.school]['aligned'][1]]['spells'],
-            this.all_spells[this.all_wizards_school[this.school]['aligned'][2]]['spells']
-        ];
-    }
-
     // Save the data
     save(){
         if(this.name){

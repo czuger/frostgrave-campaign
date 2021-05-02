@@ -3,13 +3,13 @@
  */
 
 
-var mage_manager = new MageManager();
+var mage_manager = new MageManagerAligned();
 
 Vue.component('spell-button', {
     data: function () {
         return { selected: false, nonSelected: 'btn-light', Selected: 'btn-primary', Btn: 'btn btn-block'}
     },
-    props: ['spell_name', 'spell_content', 'alignedSpellsCode'],
+    props: ['spell_name', 'spell_content', 'spell_school', 'spell_level', 'alignedSpellsCode'],
     template: `
         <div class="row mt-2">
         <div class="col-9">
@@ -24,26 +24,17 @@ Vue.component('spell-button', {
         select(event) {
             if(this.selected) {
                 this.selected = false;
-                mage_manager.remove_spell(this.alignedSpellsCode);
+                mage_manager.remove_spell(this.spell_name, this.alignedSpellsCode);
             }
             else{
                 if(!aligned_spells.selected_aligned[this.alignedSpellsCode]){
                     this.selected = true;
                     aligned_spells.selected_aligned[this.alignedSpellsCode]=this.spell_name;
+                    mage_manager.choose_spell(this.spell_name, this.spell_level, this.alignedSpellsCode);
                 }
             }
 
-            console.log(aligned_spells.selected_aligned['a'] && aligned_spells.selected_aligned['b'] &&
-                aligned_spells.selected_aligned['c']);
-
-            if(aligned_spells.selected_aligned['a'] && aligned_spells.selected_aligned['b'] &&
-                aligned_spells.selected_aligned['c']){
-                aligned_spells.can_validate = true;
-            }
-            else
-            {
-                aligned_spells.can_validate = false;
-            }
+            aligned_spells.can_validate = mage_manager.can_validate();
         }
     }
 });
@@ -67,6 +58,8 @@ var aligned_spells = new Vue({
                     .then(response => {
                         mage_manager.set_wizards(response.data);
 
+                        mage_manager.load(mage_manager.name);
+
                         const [a1, a2, a3] = mage_manager.get_aligned_spells_names();
                         [this.aligned_spells_1, this.aligned_spells_2, this.aligned_spells_3] = [a1, a2, a3];
 
@@ -83,16 +76,9 @@ var aligned_spells = new Vue({
     },
     methods: {
         validate: function() {
-            const mage_type = $('#mage_type').val();
-            const mage_name = $('#mage_name').val();
+            mage_manager.save();
 
-            let spells = LsManager.get_value(mage_name, 'spells');
-            spells.push(aligned_spells.selected_aligned['a']);
-            spells.push(aligned_spells.selected_aligned['b']);
-            spells.push(aligned_spells.selected_aligned['c']);
-
-            LsManager.set_value(mage_name, 'spells', spells);
-            window.location.href = "new_mage_neutral_spells?mage_name="+mage_name+"&mage_type="+mage_type;
+            window.location.href = "new_mage_neutral_spells?mage_name="+mage_manager.name+"&mage_type="+mage_manager.school;
         }
     }
 });
