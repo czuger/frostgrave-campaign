@@ -5,35 +5,35 @@
 
   <spell-button v-for="spell in neutral_spells_1" :key="spell['title']" v-bind:spell_name="spell['title']"
   v-bind:spell_content="'('+spell['difficulty']+') - '+spell['target']+' : '+spell['description']"
-  neutral-spells-code="a">
+  neutral-spells-code="school1" :spell_level="spell['difficulty']">
   </spell-button>
 
   %hr
 
   <spell-button v-for="spell in neutral_spells_2" :key="spell['title']" v-bind:spell_name="spell['title']"
   v-bind:spell_content="'('+spell['difficulty']+') - '+spell['target']+' : '+spell['description']"
-  neutral-spells-code="b">
+  neutral-spells-code="school2" :spell_level="spell['difficulty']">
   </spell-button>
 
   %hr
 
   <spell-button v-for="spell in neutral_spells_3" :key="spell['title']" v-bind:spell_name="spell['title']"
   v-bind:spell_content="'('+spell['difficulty']+') - '+spell['target']+' : '+spell['description']"
-  neutral-spells-code="c">
+  neutral-spells-code="school3" :spell_level="spell['difficulty']">
   </spell-button>
 
   %hr
 
   <spell-button v-for="spell in neutral_spells_4" :key="spell['title']" v-bind:spell_name="spell['title']"
   v-bind:spell_content="'('+spell['difficulty']+') - '+spell['target']+' : '+spell['description']"
-  neutral-spells-code="d">
+  neutral-spells-code="school4" :spell_level="spell['difficulty']">
   </spell-button>
 
   %hr
 
   <spell-button v-for="spell in neutral_spells_5" :key="spell['title']" v-bind:spell_name="spell['title']"
   v-bind:spell_content="'('+spell['difficulty']+') - '+spell['target']+' : '+spell['description']"
-  neutral-spells-code="e">
+  neutral-spells-code="school5" :spell_level="spell['difficulty']">
   </spell-button>
 
   <div class="row mt-2">

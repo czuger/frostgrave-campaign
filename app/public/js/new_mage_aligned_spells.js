@@ -57,12 +57,10 @@ var aligned_spells = new Vue({
                     .get('/wizards.json')
                     .then(response => {
                         mage_manager.set_wizards(response.data);
-
                         mage_manager.load(mage_manager.name);
 
                         const [a1, a2, a3] = mage_manager.get_aligned_spells_names();
                         [this.aligned_spells_1, this.aligned_spells_2, this.aligned_spells_3] = [a1, a2, a3];
-
 
                         this.$nextTick()
                             .then(function () {

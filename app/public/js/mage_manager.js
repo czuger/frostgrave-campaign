@@ -39,6 +39,16 @@ class MageManager{
         delete this.mage_spells[spell];
     }
 
+    // Increase spells value (for aligned and neutral schools)
+    increase_spells(spells, value){
+        let result = [];
+        for(let spell of spells){
+            spell.difficulty += value;
+            result.push(spell);
+        }
+        return spells;
+    }
+
     // Return all spells for a given school
     get_school_spells(school){
         return this.all_spells[school]['spells'];

@@ -10,15 +10,6 @@ class MageManagerAligned extends MageManager{
         this.aligned_school = {};
     }
 
-    increase_spells(spells){
-        let result = [];
-        for(let spell of spells){
-            spell.difficulty += 2;
-            result.push(spell);
-        }
-        return spells;
-    }
-
     // Return all spells names for the aligned schools
     get_aligned_spells_names(){
         this.aligned_school['school1'] = this.all_wizards_school[this.school]['aligned'][0];
@@ -26,9 +17,9 @@ class MageManagerAligned extends MageManager{
         this.aligned_school['school3'] = this.all_wizards_school[this.school]['aligned'][2];
 
         return [
-            this.increase_spells(this.all_spells[this.aligned_school['school1']]['spells']),
-            this.increase_spells(this.all_spells[this.aligned_school['school2']]['spells']),
-            this.increase_spells(this.all_spells[this.aligned_school['school3']]['spells'])
+            this.increase_spells(this.all_spells[this.aligned_school['school1']]['spells'], 2),
+            this.increase_spells(this.all_spells[this.aligned_school['school2']]['spells'], 2),
+            this.increase_spells(this.all_spells[this.aligned_school['school3']]['spells'], 2)
         ];
     }
 
