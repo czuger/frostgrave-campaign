@@ -2,6 +2,8 @@
  * Created by cedric on 24/04/2021.
  */
 
+var mage_manager = new MageManager();
+
 // L'objet est ajouté à une instance de Vue
 new Vue({
     el: '#mage-spells',
@@ -10,29 +12,12 @@ new Vue({
         axios
             .get('/spells.json')
             .then(response => {
-                const spells_list = response.data;
-                // console.log(spells_list);
+                mage_manager.set_mage_info_from_dom();
+                mage_manager.set_spells(response.data);
 
-                let flat_spells = {};
+                mage_manager.load(mage_manager.name);
 
-                for(const school of Object.values(spells_list)){
-                    // console.log(school);
-                    for(const spell of school['spells']){
-                        // console.log(spell);
-                        flat_spells[spell.title] = spell;
-                    }
-                }
-
-                console.log(flat_spells);
-
-                const mage_name = $('#mage_name').val();
-                let spells = LsManager.get_value(mage_name, 'spells');
-
-                console.log(spells);
-
-                for(const spell of spells){
-                    this.spells.push(flat_spells[spell]);
-                }
+                this.spells = mage_manager.spellbook();
     });
 }});
 

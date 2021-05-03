@@ -49,6 +49,32 @@ class MageManager{
         return spells;
     }
 
+    spellbook(){
+        const spellbook = [];
+
+        const flat_spells = {};
+
+        for(const school of Object.values(this.all_spells)){
+            // console.log(school);
+            for(const spell of school['spells']){
+                // console.log(spell);
+                flat_spells[spell.title] = spell;
+            }
+        }
+
+        console.log(this.mage_spells);
+        for(const spell in this.mage_spells){
+            const school = this.mage_spells[spell].school;
+            const spell_data = flat_spells[spell];
+
+
+            console.log(spell);
+            spellbook.push({'title':spell, 'difficulty':this.mage_spells[spell].level,
+                'target': spell_data.target, 'description': spell_data.description});
+        }
+        return spellbook;
+    }
+
     // Return all spells for a given school
     get_school_spells(school){
         return this.all_spells[school]['spells'];
