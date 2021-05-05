@@ -29,5 +29,4 @@ class LsManager{
 
         localStorage.setItem( encodeURI(object_name), _data );
     }
-
 };
