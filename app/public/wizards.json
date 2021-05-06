@@ -1,9 +1,33 @@
 {
   "CHRONOMANCIEN": {
     "title": "CHRONOMANCIEN",
-    "aligned": ["NÉCROMANT", "DEVIN", "ÉLÉMENTALISTE"],
+    "aligned": ["ÉLÉMENTALISTE", "NÉCROMANT", "DEVIN"],
     "neutral": ["THAUMATURGE", "INVOCATEUR", "ILLUSIONNISTE", "SORCIER", "CRYPTOMANCIEN"],
     "opposed": ["ENCHANTEUR"]
+  },
+  "ÉLÉMENTALISTE": {
+    "title": "ÉLÉMENTALISTE",
+    "aligned": ["INVOCATEUR", "ENCHANTEUR", "CHRONOMANCIEN"],
+    "neutral": ["THAUMATURGE", "DEVIN", "CRYPTOMANCIEN", "SORCIER", "NÉCROMANT"],
+    "opposed": ["ILLUSIONNISTE"]
+  },
+  "ENCHANTEUR": {
+    "title": "ENCHANTEUR",
+    "aligned": ["ÉLÉMENTALISTE", "CRYPTOMANCIEN", "SORCIER"],
+    "neutral": ["ILLUSIONNISTE", "NÉCROMANT", "DEVIN", "INVOCATEUR", "THAUMATURGE"],
+    "opposed": ["CHRONOMANCIEN"]
+  },
+  "ILLUSIONNISTE": {
+    "title": "ILLUSIONNISTE",
+    "aligned": ["CRYPTOMANCIEN", "DEVIN", "THAUMATURGE"],
+    "neutral": ["CHRONOMANCIEN", "ENCHANTEUR", "NÉCROMANT", "INVOCATEUR", "SORCIER"],
+    "opposed": ["ÉLÉMENTALISTE"]
+  },
+  "NÉCROMANT": {
+    "title": "NÉCROMANT",
+    "aligned": ["CHRONOMANCIEN", "INVOCATEUR", "SORCIER"],
+    "neutral": ["ÉLÉMENTALISTE", "ENCHANTEUR", "ILLUSIONNISTE", "CRYPTOMANCIEN", "DEVIN"],
+    "opposed": ["THAUMATURGE"]
   },
   "CRYPTOMANCIEN": {
     "title": "CRYPTOMANCIEN",
@@ -17,10 +41,22 @@
     "neutral": ["ÉLÉMENTALISTE", "ENCHANTEUR", "NÉCROMANT", "CRYPTOMANCIEN", "INVOCATEUR"],
     "opposed": ["SORCIER"]
   },
-  "ÉLÉMENTALISTE": {
-    "title": "ÉLÉMENTALISTE",
-    "aligned": ["INVOCATEUR", "ENCHANTEUR", "CHRONOMANCIEN"],
-    "neutral": ["THAUMATURGE", "DEVIN", "CRYPTOMANCIEN", "SORCIER", "NÉCROMANT"],
-    "opposed": ["ILLUSIONNISTE"]
+  "INVOCATEUR": {
+    "title": "INVOCATEUR",
+    "aligned": ["ÉLÉMENTALISTE", "NÉCROMANT", "SORCIER"],
+    "neutral": ["CHRONOMANCIEN", "ENCHANTEUR", "ILLUSIONNISTE", "DEVIN", "THAUMATURGE"],
+    "opposed": ["CRYPTOMANCIEN"]
+  },
+  "THAUMATURGE": {
+    "title": "THAUMATURGE",
+    "aligned": ["ILLUSIONNISTE", "CRYPTOMANCIEN", "DEVIN"],
+    "neutral": ["CHRONOMANCIEN", "ÉLÉMENTALISTE", "ENCHANTEUR", "INVOCATEUR", "SORCIER"],
+    "opposed": ["NÉCROMANT"]
+  },
+  "SORCIER": {
+    "title": "SORCIER",
+    "aligned": ["ENCHANTEUR", "NÉCROMANT", "INVOCATEUR"],
+    "neutral": ["CHRONOMANCIEN", "ÉLÉMENTALISTE", "ILLUSIONNISTE", "CRYPTOMANCIEN", "THAUMATURGE"],
+    "opposed": ["DEVIN"]
   }
 }
