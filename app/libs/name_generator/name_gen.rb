@@ -8,7 +8,7 @@ def gen_name(sex, title)
   # For now sex and title are random
 
   sex = (rand(1..3) == 1 ? :female : :male)
-  title = (rand(1..5) == 1)
+  title = (rand(1..3) == 1)
 
   name = MageName.new.gen(sex)
 
