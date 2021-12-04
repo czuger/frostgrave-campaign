@@ -2,10 +2,19 @@
 
   %h1 Gestionnaire de mages Frostgrave
 
-  <a role="button" class="btn btn-secondary btn-block"
-  v-for="name in names" :key="wiz" :href="'/show_mage_spells?mage_name=' + name">
-  {{ decodeURI(name) }}
-  </a>
+  - @wizards.each do |wizard|
+    %tr
+      %td= wizard.name
+
+
+  -#<a role="button" class="btn btn-secondary btn-block"
+  -#
+  -#v-for="name in names" :key="wiz" :href="'/show_mage_spells?mage_name=' + name">
+  -#{{ decodeURI(name) }}
+  -#
+  -#</a>
+
+
 
   %a.btn.btn-primary.btn-block{:href => "new_mage_create", :role => "button"} Créer un mage
 

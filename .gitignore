@@ -1,5 +1,8 @@
 settings.json
 
+settings.json
+*.sqlite3
+
 *.pid
 
 .idea
