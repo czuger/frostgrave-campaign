@@ -13,8 +13,8 @@ require_relative 'auth'
 require_relative 'models/user'
 require_relative 'models/wizard'
 require 'sinatra/activerecord'
-gem 'sqlite3'
 require_relative 'libs/name_generator/name_gen'
+require 'pp'
 
 settings = File.read("#{Dir.getwd}/config/settings.json")
 settings = JSON.parse(settings)
@@ -68,8 +68,19 @@ get '/show_mage_spells' do
   haml :show_mage_spells, :locals => {mage_type: params[:mage_type], mage_name: params[:mage_name]}
 end
 
-sleep(5)
+post '/sync_mage' do
+  # p 'request'
+  # pp request
 
-File.open('frostgrave.pid', 'w') do |f|
-  f.puts Process.pid
+  p 'params'
+  pp params
+
+  nil
 end
+
+
+# sleep(5)
+
+# File.open('frostgrave.pid', 'w') do |f|
+#   f.puts Process.pid
+# end

@@ -100,6 +100,8 @@ class MageManager{
             LsManager.set_value(this.name, 'name', this.name);
             LsManager.set_value(this.name, 'school', this.school);
             LsManager.set_value(this.name, 'spells', this.mage_spells);
+
+            sync_mage(this);
         }
     }
 
