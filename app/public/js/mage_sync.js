@@ -18,6 +18,8 @@ function sync_mage(mage_manager){
     mm = Object.assign({}, mage_manager);
     mm.all_spells = null;
 
-    $.post( "/sync_mage", mm );
+    $.post( "/sync_mage", mm, function( result ){
+            console.log(result);
+        }, 'json');
 
 }

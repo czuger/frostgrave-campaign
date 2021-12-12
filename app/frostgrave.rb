@@ -12,6 +12,9 @@ require_relative 'auth'
 
 require_relative 'models/user'
 require_relative 'models/wizard'
+require_relative 'models/spell_school'
+require_relative 'models/spell_known'
+require_relative 'models/spell'
 require 'sinatra/activerecord'
 require_relative 'libs/name_generator/name_gen'
 require 'pp'
@@ -49,33 +52,49 @@ get '/' do
 end
 
 get '/new_mage_create' do
+  authorize!
   haml :new_mage_create
 end
 
 get '/new_mage_school_spells' do
+  authorize!
   haml :new_mage_school_spells, :locals => {mage_type: params[:mage_type], mage_name: params[:mage_name]}
 end
 
 get '/new_mage_aligned_spells' do
+  authorize!
   haml :new_mage_aligned_spells, :locals => {mage_type: params[:mage_type], mage_name: params[:mage_name]}
 end
 
 get '/new_mage_neutral_spells' do
+  authorize!
   haml :new_mage_neutral_spells, :locals => {mage_type: params[:mage_type], mage_name: params[:mage_name]}
 end
 
 get '/show_mage_spells' do
+  authorize!
   haml :show_mage_spells, :locals => {mage_type: params[:mage_type], mage_name: params[:mage_name]}
 end
 
 post '/sync_mage' do
-  # p 'request'
-  # pp request
-
-  p 'params'
+  authorize!
   pp params
 
-  nil
+  user = current_user
+  p user
+  school = SpellSchool.find_by(name: params[:school])
+  p school
+
+  mage = Wizard.find_or_create_by!(name: params[:name], user_id: user.id, spell_school_id: school.id)
+
+  params[:mage_spells].each do |k, v|
+    spell = Spell.find_by(name: k)
+    SpellKnown.find_or_create_by!(spell_id: spell.id, wizard_id: mage.id, level: v['level'])
+  end
+
+  content_type :json
+
+  {mage_id: mage.id}.to_json
 end
 
 

@@ -6,7 +6,14 @@ module Sinatra
 
     module Helpers
       def authorized?
-        !session[:user_id].nil?
+        # Force session load (assign dummy)
+        session[:foo] = :bar
+
+        if session[:user_id]
+          return true if User.where(id: session[:user_id]).exists?
+        end
+
+        false
       end
 
       def authorize!

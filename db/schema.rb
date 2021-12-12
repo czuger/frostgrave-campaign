@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2021_05_05_193846) do
   create_table "spell_knowns", force: :cascade do |t|
     t.integer "wizard_id", null: false
     t.integer "spell_id", null: false
-    t.integer "learned", limit: 2, default: 0, null: false
+    t.integer "level", limit: 2, default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["spell_id"], name: "index_spell_knowns_on_spell_id"
@@ -73,7 +73,6 @@ ActiveRecord::Schema.define(version: 2021_05_05_193846) do
     t.integer "user_id", null: false
     t.integer "spell_school_id", null: false
     t.string "name", null: false
-    t.string "school", null: false
     t.boolean "alive", default: true, null: false
     t.string "status", default: "mage", null: false
     t.integer "move", limit: 2, default: 6, null: false

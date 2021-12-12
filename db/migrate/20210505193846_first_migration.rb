@@ -38,7 +38,6 @@ class FirstMigration < ActiveRecord::Migration[6.1]
       t.references :spell_school, null: false, foreign_key: true
 
       t.string :name, null: false
-      t.string :school, null: false
 
       # False if dead
       t.boolean :alive, null: false, default: true
@@ -76,7 +75,7 @@ class FirstMigration < ActiveRecord::Migration[6.1]
       t.references :wizard, null: false, foreign_key: true
       t.references :spell, null: false, foreign_key: true
 
-      t.integer :learned, null: false, default: 0, limit: 2
+      t.integer :level, null: false, default: 0, limit: 2
 
       t.timestamps
     end
