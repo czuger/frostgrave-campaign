@@ -12,6 +12,7 @@ class MageManager{
     set_mage_info_from_dom(){
         this.name = $('#mage_name').val();
         this.school = $('#mage_type').val();
+        this.wizard_id = $('#wizard_id').val();
     }
 
     // Set the spells list
@@ -100,8 +101,6 @@ class MageManager{
             LsManager.set_value(this.name, 'name', this.name);
             LsManager.set_value(this.name, 'school', this.school);
             LsManager.set_value(this.name, 'spells', this.mage_spells);
-
-            sync_mage(this);
         }
     }
 

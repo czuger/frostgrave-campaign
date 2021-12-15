@@ -2,7 +2,7 @@
  * Created by cedric on 28/04/2021.
  */
 
-function sync_mage(mage_manager){
+function sync_mage(mage_manager, next_url){
 
     // console.log("Mage manager", JSON.stringify(mage_manager));
 
@@ -20,6 +20,6 @@ function sync_mage(mage_manager){
 
     $.post( "/sync_mage", mm, function( result ){
             console.log(result);
+            // window.location.href = next_url + "&mage_id=" + result['mage_id'];
         }, 'json');
-
 }

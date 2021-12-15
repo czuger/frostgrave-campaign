@@ -15,8 +15,8 @@
 
   %input{ type: :hidden, id: :mage_type, value: mage_type}
   %input{ type: :hidden, id: :mage_name, value: mage_name}
+  %input{ type: :hidden, id: :mage_id, value: @wizard.id}
 
 = haml :common_js
 
-%script{ type: 'application/javascript', :src => '/js/mage_sync.js'}
 %script{ type: 'application/javascript', :src => '/js/new_mage_school_spells.js'}

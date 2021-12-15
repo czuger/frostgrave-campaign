@@ -63,6 +63,8 @@ end
 
 get '/new_mage_aligned_spells' do
   authorize!
+  @wizard = Wizard.find(params['mage_id'])
+  p @wizard
   haml :new_mage_aligned_spells, :locals => {mage_type: params[:mage_type], mage_name: params[:mage_name]}
 end
 
@@ -84,6 +86,7 @@ post '/sync_mage' do
   p user
   school = SpellSchool.find_by(name: params[:school])
   p school
+
 
   mage = Wizard.find_or_create_by!(name: params[:name], user_id: user.id, spell_school_id: school.id)
 

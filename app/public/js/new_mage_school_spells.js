@@ -77,7 +77,11 @@ var school_spells = new Vue({
     },
     methods: {
         validate: function() {
-            mage_manager.save();
+
+            const next_url = "new_mage_aligned_spells?mage_type="+mage_manager.school;
+            sync_mage(mage_manager, next_url);
+
+            // mage_manager.save();
             // window.location.href = "new_mage_aligned_spells?mage_name="+mage_manager.name+"&mage_type="+mage_manager.school;
         }
     }

@@ -74,9 +74,11 @@ var aligned_spells = new Vue({
     },
     methods: {
         validate: function() {
-            mage_manager.save();
+            // mage_manager.save();
 
-            window.location.href = "new_mage_neutral_spells?mage_name="+mage_manager.name+"&mage_type="+mage_manager.school;
+            const next_url = "new_mage_neutral_spells?mage_type="+mage_manager.school;
+            sync_mage(mage_manager, next_url);
+
         }
     }
 });
