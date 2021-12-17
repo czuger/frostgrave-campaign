@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_05_193846) do
+ActiveRecord::Schema.define(version: 2021_12_17_072512) do
 
   create_table "campaigns", force: :cascade do |t|
     t.string "name", null: false
@@ -85,6 +85,7 @@ ActiveRecord::Schema.define(version: 2021_05_05_193846) do
     t.integer "level", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "creation_state"
     t.index ["spell_school_id"], name: "index_wizards_on_spell_school_id"
     t.index ["user_id"], name: "index_wizards_on_user_id"
   end

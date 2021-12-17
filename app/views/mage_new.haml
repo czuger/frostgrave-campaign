@@ -14,10 +14,10 @@
   .row.mt-3
     .col-12
       <a role="button" class="btn btn-primary btn-block"
-      v-for="wiz in wiz_types" :key="wiz" :href="'/new_mage_school_spells?mage_type=' + wiz + '&mage_name=' + name">
+      v-for="wiz in wiz_types" :key="wiz" :href="'/mage_create?mage_type=' + wiz + '&mage_name=' + name">
       {{ wiz }}
       </a>
 
 = haml :common_js
 
-%script{ type: 'application/javascript', :src => '/js/new_mage_create.js'}
+%script{ type: 'application/javascript', src: '/js/mage_new.js'}

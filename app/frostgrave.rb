@@ -9,6 +9,7 @@ require 'omniauth'
 require 'omniauth-discord'
 
 require_relative 'auth'
+require_relative 'wizard_edition'
 
 require_relative 'models/user'
 require_relative 'models/wizard'
@@ -49,11 +50,6 @@ get '/' do
   authorize!
   @wizards = current_user.wizards
   haml :index
-end
-
-get '/new_mage_create' do
-  authorize!
-  haml :new_mage_create
 end
 
 get '/new_mage_school_spells' do
