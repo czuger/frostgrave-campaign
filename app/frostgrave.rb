@@ -42,40 +42,39 @@ use OmniAuth::Builder do
   provider :discord, settings['discord_auth_id'], settings['discord_auth_key']
 end
 
+before do
+  pass if %w[auth login logout].include? request.path_info.split('/')[1]
+  authorize!
+end
+
 get '/name' do
   gen_name(params['sex'], params['title'])
 end
 
 get '/' do
-  authorize!
   @wizards = current_user.wizards
   haml :index
 end
 
 get '/new_mage_school_spells' do
-  authorize!
   haml :new_mage_school_spells, :locals => {mage_type: params[:mage_type], mage_name: params[:mage_name]}
 end
 
 get '/new_mage_aligned_spells' do
-  authorize!
   @wizard = Wizard.find(params['mage_id'])
   p @wizard
   haml :new_mage_aligned_spells, :locals => {mage_type: params[:mage_type], mage_name: params[:mage_name]}
 end
 
 get '/new_mage_neutral_spells' do
-  authorize!
   haml :new_mage_neutral_spells, :locals => {mage_type: params[:mage_type], mage_name: params[:mage_name]}
 end
 
 get '/show_mage_spells' do
-  authorize!
   haml :show_mage_spells, :locals => {mage_type: params[:mage_type], mage_name: params[:mage_name]}
 end
 
 post '/sync_mage' do
-  authorize!
   pp params
 
   user = current_user

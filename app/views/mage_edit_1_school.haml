@@ -13,10 +13,9 @@
   </div>
   </div>
 
-  -#%input{ type: :hidden, id: :mage_type, value: mage_type}
-  -#%input{ type: :hidden, id: :mage_name, value: mage_name}
-  -#%input{ type: :hidden, id: :mage_id, value: @wizard.id}
+
+%input{ type: :hidden, id: :mage, value: @wizard_export.to_json}
 
 = haml :common_js
 
-%script{ type: 'application/javascript', :src => '/js/new_mage_school_spells.js'}
+%script{ type: 'application/javascript', :src => '/js/mage_edit_1_school.js'}
