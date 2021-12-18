@@ -60,7 +60,15 @@ var school_spells = new Vue({
 
         this.spells = mage_manager.get_mage_school_spells();
 
-    //     axios
+        this.$nextTick(() => {
+            // Fires before full page is rendered
+            $('[data-toggle="popover"]').popover({
+                trigger: 'focus'
+            });
+        });
+
+
+        //     axios
     //         .get('/spells.json')
     //         .then(response => {
     //             const result = response.data;
