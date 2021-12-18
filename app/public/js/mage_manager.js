@@ -10,14 +10,16 @@ class MageManager{
 
     // Set the mage info
     set_mage_info_from_dom(){
-        this.name = $('#mage_name').val();
-        this.school = $('#mage_type').val();
-        this.wizard_id = $('#wizard_id').val();
+        const wizard = JSON.parse($('#wizard').val());
+
+        this.name = wizard.name;
+        this.school = wizard.school_name;
+        this.wizard_id = wizard.id;
     }
 
     // Set the spells list
     set_spells(_spells){
-        const json_str = $('#spells');
+        const json_str = $('#spells').val();
         const spells = JSON.parse(json_str);
         this.all_spells = spells;
     }

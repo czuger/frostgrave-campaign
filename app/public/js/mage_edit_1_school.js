@@ -53,9 +53,12 @@ var school_spells = new Vue({
     mounted: function () {
         this.name = name_gen();
 
+        mage_manager.set_mage_info_from_dom();
         mage_manager.set_spells();
 
         console.log(mage_manager);
+
+        this.spells = mage_manager.get_mage_school_spells();
 
     //     axios
     //         .get('/spells.json')
