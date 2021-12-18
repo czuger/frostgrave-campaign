@@ -93,7 +93,7 @@ var school_spells = new Vue({
     methods: {
         validate: function() {
 
-            const next_url = "new_mage_aligned_spells?mage_type="+mage_manager.school;
+            const next_url = "/mage/"+mage_manager.id+"/edit/aligned";
             sync_mage(mage_manager, next_url);
 
             // mage_manager.save();

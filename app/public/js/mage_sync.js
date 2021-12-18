@@ -2,7 +2,7 @@
  * Created by cedric on 28/04/2021.
  */
 
-function sync_mage(mage_manager, next_url){
+function sync_mage(mage_manager){
 
     // console.log("Mage manager", JSON.stringify(mage_manager));
 

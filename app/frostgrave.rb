@@ -77,19 +77,22 @@ get '/show_mage_spells' do
 end
 
 post '/sync_mage' do
-  pp params
+  # pp params
 
   user = current_user
-  p user
+  # p user
   school = SpellSchool.find_by(name: params[:school])
-  p school
+  # p school
 
+  mage = nil
 
-  mage = Wizard.find_or_create_by!(name: params[:name], user_id: user.id, spell_school_id: school.id)
+  Wizard.transaction do
+    mage = Wizard.find_or_create_by!(name: params[:name], user_id: user.id, spell_school_id: school.id)
 
-  params[:mage_spells].each do |k, v|
-    spell = Spell.find_by(name: k)
-    SpellKnown.find_or_create_by!(spell_id: spell.id, wizard_id: mage.id, level: v['level'])
+    params[:mage_spells].each do |k, v|
+      spell = Spell.find_by(name: k)
+      SpellKnown.find_or_create_by!(spell_id: spell.id, wizard_id: mage.id, level: v['level'])
+    end
   end
 
   content_type :json
