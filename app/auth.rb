@@ -7,11 +7,12 @@ module Sinatra
 
     module Helpers
       def encode_jwt_token(payload)
-        JWT.encode(payload, nil, 'none')
+        payload['salt'] = rand
+        JWT.encode(payload, $jwt_token_key, 'HS256')
       end
 
       def decode_jwt_token
-        JWT.decode(session[:jwt_token], nil, false)
+        JWT.decode(session[:jwt_token], $jwt_token_key, true, { algorithm: 'HS256' })
       end
 
       def authorized?

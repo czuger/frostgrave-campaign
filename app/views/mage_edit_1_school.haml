@@ -13,8 +13,8 @@
   </div>
   </div>
 
-
-%input{ type: :hidden, id: :mage, value: @wizard_export.to_json}
+%input{ type: :hidden, id: :wizard, value: @wizard_export.to_json}
+%input{ type: :hidden, id: :spells, value: @spells}
 
 = haml :common_js
 

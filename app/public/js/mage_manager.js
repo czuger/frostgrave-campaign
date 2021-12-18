@@ -17,7 +17,9 @@ class MageManager{
 
     // Set the spells list
     set_spells(_spells){
-        this.all_spells = _spells;
+        const json_str = $('#spells');
+        const spells = JSON.parse(json_str);
+        this.all_spells = spells;
     }
 
     // Set the wizard school list

@@ -28,6 +28,9 @@ module Sinatra
         end
       end
 
+      def set_spells
+        @spells = File.open('data/spells.json').read
+      end
     end
 
     def self.registered(app)
@@ -53,6 +56,7 @@ module Sinatra
 
       app.get '/mage/:wizard_id/edit/:step' do
         set_wizard_from_params
+        set_spells
 
         if params[:step] == 'school'
           haml :mage_edit_1_school

@@ -53,27 +53,31 @@ var school_spells = new Vue({
     mounted: function () {
         this.name = name_gen();
 
-        axios
-            .get('/spells.json')
-            .then(response => {
-                const result = response.data;
+        mage_manager.set_spells();
 
-                mage_manager.set_mage_info_from_dom();
-                mage_manager.load(mage_manager.name);
-                mage_manager.set_spells(result);
+        console.log(mage_manager);
 
-                this.spells = mage_manager.get_mage_school_spells();
-                if(this.spells.length >= 3){
-                    this.can_validate = true;
-                }
-
-                this.$nextTick(() => {
-                    // Fires before full page is rendered
-                    $('[data-toggle="popover"]').popover({
-                        trigger: 'focus'
-                    });
-                });
-    });
+    //     axios
+    //         .get('/spells.json')
+    //         .then(response => {
+    //             const result = response.data;
+    //
+    //             mage_manager.set_mage_info_from_dom();
+    //             mage_manager.load(mage_manager.name);
+    //             mage_manager.set_spells(result);
+    //
+    //             this.spells = mage_manager.get_mage_school_spells();
+    //             if(this.spells.length >= 3){
+    //                 this.can_validate = true;
+    //             }
+    //
+    //             this.$nextTick(() => {
+    //                 // Fires before full page is rendered
+    //                 $('[data-toggle="popover"]').popover({
+    //                     trigger: 'focus'
+    //                 });
+    //             });
+    // });
     },
     methods: {
         validate: function() {

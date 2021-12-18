@@ -23,6 +23,8 @@ require 'pp'
 settings = File.read("#{Dir.getwd}/config/settings.json")
 settings = JSON.parse(settings)
 
+$jwt_token_key = settings['jwt_token_key']
+
 use Rack::Session::Cookie,
     :secret => settings['session_key'],
     :key => 'frostgrave_campaign_session'
