@@ -105,6 +105,7 @@ PLATFORMS
 
 DEPENDENCIES
   haml (~> 5.2)
+  jwt
   nokogiri (~> 1.11.2)
   omniauth
   omniauth-discord

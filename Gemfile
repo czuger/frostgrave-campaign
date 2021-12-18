@@ -24,3 +24,4 @@ gem 'rake', '~> 13.0.3'
 gem 'sqlite3', '~> 1.4.2'
 
 gem 'webrick'
+gem 'jwt'

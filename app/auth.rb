@@ -1,3 +1,4 @@
+require 'jwt'
 require 'sinatra/base'
 require_relative '../app/models/user'
 
@@ -5,12 +6,20 @@ module Sinatra
   module Auth
 
     module Helpers
+      def encode_jwt_token(payload)
+        JWT.encode(payload, nil, 'none')
+      end
+
+      def decode_jwt_token
+        JWT.decode(session[:jwt_token], nil, false)
+      end
+
       def authorized?
         # Force session load (assign dummy)
-        session[:foo] = :bar
+        session[:warm_up] = :warmup
 
-        if session[:user_id]
-          return true if User.where(id: session[:user_id]).exists?
+        if session[:jwt_token]
+          return true if decode_jwt_token
         end
 
         false
@@ -21,7 +30,7 @@ module Sinatra
       end
 
       def logout!
-        session[:user_id] = nil
+        session[:jwt_token] = nil
       end
 
       def register_user(auth_hash)
@@ -30,12 +39,12 @@ module Sinatra
         u.avatar = auth_hash['info']['image']
         u.save!
 
-        session[:user_id] = u.id
-        p session
+        session[:jwt_token] = encode_jwt_token({ id: u.id, name: u.name, avatar: u.avatar })
       end
 
       def current_user
-        User.find(session[:user_id])
+        token = decode_jwt_token
+        User.find(token[0]['id'])
       end
     end
 
