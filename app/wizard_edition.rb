@@ -42,7 +42,7 @@ module Sinatra
         spell_to_school = Hash[Spell.includes(:spell_school).all.map{ |e| [e.name, e.spell_school.name]}]
 
         wizard_school_name = @wizard.spell_school.name
-        p wizard_school_name
+        # p wizard_school_name
 
         @flatten_spells.each do |spell_name, v|
           if spells[spell_name]
