@@ -11,14 +11,21 @@ Vue.component('spell-button', {
     props: ['spell_name', 'spell_content', 'spell_level', 'from_disk', 'selected_saved_state', ],
     template: `
         <div class="row mt-2">
-        <div class="col-8">
+        <div class="col-7">
             <button type="button" :class="[selected ? Selected : nonSelected, Btn]" @click="select">{{ spell_name }}</button>        
         </div>
-        <div class="col-1">
+        <div class="col-3 col-md-1">
             <input type="number" id="form12" class="form-control" :value="spell_level" />     
         </div>        
-        <div class="col-3">
-            <button type="button" class="btn btn-block btn-warning" data-toggle="popover" data-placement="left" :data-content="spell_content">Info</button>        
+        <div class="col-2 col-md-2">
+            <button type="button" class="btn btn-block btn-warning" data-toggle="popover" data-placement="left" :data-content="spell_content">
+            <div class="d-none d-md-block">
+                Info            
+            </div>
+            <div class="d-sm-block d-md-none">
+                ?
+            </div>
+            </button>        
         </div>
         </div>
     `,

@@ -4,7 +4,7 @@
     Liste des sorts du mage
 
   <spell-button v-for="spell in spells" :key="spell['title']" v-bind:spell_name="spell['title']"
-  v-bind:spell_content="'('+spell['difficulty']+') - '+spell['target']+' : '+spell['description']"
+  v-bind:spell_content="'('+spell['base_difficulty']+' - '+spell['difficulty']+') - '+spell['target']+' : '+spell['description']"
   v-bind:spell_level=spell['difficulty'] v-bind:selected_saved_state=spell['selected_saved_state']></spell-button>
 
   <div class="row mt-2">

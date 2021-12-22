@@ -47,10 +47,12 @@ module Sinatra
         @flatten_spells.each do |spell_name, v|
           if spells[spell_name]
             v['selected_saved_state'] = true
+            v['base_difficulty'] = v['difficulty']
             v['difficulty'] = spells[spell_name]
           else
             spell_school = spell_to_school[spell_name]
             v['selected_saved_state'] = false
+            v['base_difficulty'] = v['difficulty']
             v['difficulty'] = v['difficulty'] + reversed_schools[wizard_school_name][spell_school]['malus']
           end
         end
