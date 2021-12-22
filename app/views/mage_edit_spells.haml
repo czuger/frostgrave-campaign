@@ -9,13 +9,14 @@
 
   <div class="row mt-2">
   <div class="col-9">
-  <button type="button" class="btn btn-primary btn-block" :disabled="!can_validate" v-on:click="validate">Valider</button>
+  <button type="button" class="btn btn-primary btn-block" v-on:click="validate">Valider</button>
   </div>
   </div>
 
 %input{ type: :hidden, id: :wizard, value: @wizard_export.to_json}
-%input{ type: :hidden, id: :spells, value: @spells}
+%input{ type: :hidden, id: :flatten_spells, value: @flatten_spells.to_json}
+%input{ type: :hidden, id: :sorted_spells_keys, value: @sorted_spells_keys}
 
 = haml :common_js
 
-%script{type: 'application/javascript', src: '/js/mage_new_1_school.js'}
+%script{type: 'application/javascript', src: '/js/mage_edit_spells.js'}

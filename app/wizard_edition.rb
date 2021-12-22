@@ -3,6 +3,7 @@ require 'json'
 require_relative '../app/models/user'
 require_relative 'models/spell_school'
 require_relative 'models/wizard'
+require_relative 'models/spell'
 
 module Sinatra
   module WizardEdition
@@ -20,7 +21,7 @@ module Sinatra
             name: @wizard.name,
             school_id: @wizard.spell_school_id,
             school_name: @wizard.spell_school.name,
-            spells: @wizard.spell_knowns.map(&:id)
+            spells_names: @wizard.spell_knowns.includes(:spell).map{ |e| e.spell.name }
           }
 
           # pp @wizard_export
@@ -35,7 +36,28 @@ module Sinatra
 
       def set_full_flat_spells_map
         @flatten_spells = JSON.parse(File.open('data/flatten_spells.json').read)
-        @sorted_spells_keys = JSON.parse(File.open('data/sorted_spells_keys.json').read)
+        reversed_schools = JSON.parse(File.open('data/reversed_schools.json').read)
+
+        spells = Hash[@wizard.spell_knowns.includes(:spell).map{ |e| [e.spell.name, e.level] }]
+        spell_to_school = Hash[Spell.includes(:spell_school).all.map{ |e| [e.name, e.spell_school.name]}]
+
+        wizard_school_name = @wizard.spell_school.name
+        p wizard_school_name
+
+        @flatten_spells.each do |spell_name, v|
+          if spells[spell_name]
+            v['selected_saved_state'] = true
+            v['difficulty'] = spells[spell_name]
+          else
+            spell_school = spell_to_school[spell_name]
+            v['selected_saved_state'] = false
+            v['difficulty'] = v['difficulty'] + reversed_schools[wizard_school_name][spell_school]['malus']
+          end
+        end
+      end
+
+      def set_sorted_spells_keys
+        @sorted_spells_keys = File.open('data/sorted_spells_keys.json').read
       end
     end
 
@@ -71,7 +93,8 @@ module Sinatra
 
       app.get '/mage/:wizard_id/edit_spells' do
         set_wizard_from_params
-        set_spells
+        set_full_flat_spells_map
+        set_sorted_spells_keys
 
         haml :mage_edit_spells
       end

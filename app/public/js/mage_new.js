@@ -14,7 +14,7 @@ new Vue({
             });
 
         axios
-            .get('/wizards.json')
+            .get('/schools.json')
             .then(response => {
                 const result = response.data;
                 console.log(result);

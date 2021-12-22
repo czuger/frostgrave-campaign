@@ -1,0 +1,422 @@
+{
+  "CHRONOMANCIEN": {
+    "CHRONOMANCIEN": {
+      "alignment": "school",
+      "malus": 0
+    },
+    "ÉLÉMENTALISTE": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "NÉCROMANT": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "DEVIN": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "THAUMATURGE": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "INVOCATEUR": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "ILLUSIONNISTE": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "SORCIER": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "CRYPTOMANCIEN": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "ENCHANTEUR": {
+      "alignment": "opposed",
+      "malus": 6
+    }
+  },
+  "ÉLÉMENTALISTE": {
+    "ÉLÉMENTALISTE": {
+      "alignment": "school",
+      "malus": 0
+    },
+    "INVOCATEUR": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "ENCHANTEUR": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "CHRONOMANCIEN": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "THAUMATURGE": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "DEVIN": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "CRYPTOMANCIEN": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "SORCIER": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "NÉCROMANT": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "ILLUSIONNISTE": {
+      "alignment": "opposed",
+      "malus": 6
+    }
+  },
+  "ENCHANTEUR": {
+    "ENCHANTEUR": {
+      "alignment": "school",
+      "malus": 0
+    },
+    "ÉLÉMENTALISTE": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "CRYPTOMANCIEN": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "SORCIER": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "ILLUSIONNISTE": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "NÉCROMANT": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "DEVIN": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "INVOCATEUR": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "THAUMATURGE": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "CHRONOMANCIEN": {
+      "alignment": "opposed",
+      "malus": 6
+    }
+  },
+  "ILLUSIONNISTE": {
+    "ILLUSIONNISTE": {
+      "alignment": "school",
+      "malus": 0
+    },
+    "CRYPTOMANCIEN": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "DEVIN": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "THAUMATURGE": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "CHRONOMANCIEN": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "ENCHANTEUR": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "NÉCROMANT": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "INVOCATEUR": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "SORCIER": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "ÉLÉMENTALISTE": {
+      "alignment": "opposed",
+      "malus": 6
+    }
+  },
+  "NÉCROMANT": {
+    "NÉCROMANT": {
+      "alignment": "school",
+      "malus": 0
+    },
+    "CHRONOMANCIEN": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "INVOCATEUR": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "SORCIER": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "ÉLÉMENTALISTE": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "ENCHANTEUR": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "ILLUSIONNISTE": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "CRYPTOMANCIEN": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "DEVIN": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "THAUMATURGE": {
+      "alignment": "opposed",
+      "malus": 6
+    }
+  },
+  "CRYPTOMANCIEN": {
+    "CRYPTOMANCIEN": {
+      "alignment": "school",
+      "malus": 0
+    },
+    "THAUMATURGE": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "ILLUSIONNISTE": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "ENCHANTEUR": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "ÉLÉMENTALISTE": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "NÉCROMANT": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "SORCIER": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "CHRONOMANCIEN": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "DEVIN": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "INVOCATEUR": {
+      "alignment": "opposed",
+      "malus": 6
+    }
+  },
+  "DEVIN": {
+    "DEVIN": {
+      "alignment": "school",
+      "malus": 0
+    },
+    "THAUMATURGE": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "ILLUSIONNISTE": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "CHRONOMANCIEN": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "ÉLÉMENTALISTE": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "ENCHANTEUR": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "NÉCROMANT": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "CRYPTOMANCIEN": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "INVOCATEUR": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "SORCIER": {
+      "alignment": "opposed",
+      "malus": 6
+    }
+  },
+  "INVOCATEUR": {
+    "INVOCATEUR": {
+      "alignment": "school",
+      "malus": 0
+    },
+    "ÉLÉMENTALISTE": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "NÉCROMANT": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "SORCIER": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "CHRONOMANCIEN": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "ENCHANTEUR": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "ILLUSIONNISTE": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "DEVIN": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "THAUMATURGE": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "CRYPTOMANCIEN": {
+      "alignment": "opposed",
+      "malus": 6
+    }
+  },
+  "THAUMATURGE": {
+    "THAUMATURGE": {
+      "alignment": "school",
+      "malus": 0
+    },
+    "ILLUSIONNISTE": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "CRYPTOMANCIEN": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "DEVIN": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "CHRONOMANCIEN": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "ÉLÉMENTALISTE": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "ENCHANTEUR": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "INVOCATEUR": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "SORCIER": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "NÉCROMANT": {
+      "alignment": "opposed",
+      "malus": 6
+    }
+  },
+  "SORCIER": {
+    "SORCIER": {
+      "alignment": "school",
+      "malus": 0
+    },
+    "ENCHANTEUR": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "NÉCROMANT": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "INVOCATEUR": {
+      "alignment": "aligned",
+      "malus": 2
+    },
+    "CHRONOMANCIEN": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "ÉLÉMENTALISTE": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "ILLUSIONNISTE": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "CRYPTOMANCIEN": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "THAUMATURGE": {
+      "alignment": "neutral",
+      "malus": 4
+    },
+    "DEVIN": {
+      "alignment": "opposed",
+      "malus": 6
+    }
+  }
+}

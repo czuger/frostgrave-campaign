@@ -5,7 +5,7 @@ status = :waiting
 spells = {}
 current_spell = {}
 
-File.open('spells.txt').readlines.each do |line|
+File.open('spells_english.txt').readlines.each do |line|
   spline = line.split
 
   if spline.count == 1 and spline.first.upcase == spline.first

@@ -50,7 +50,7 @@ var neutral_spells = new Vue({
                 mage_manager.set_spells(response.data);
 
                 axios
-                    .get('/wizards.json')
+                    .get('/schools.json')
                     .then(response => {
                         mage_manager.set_wizards(response.data);
                         mage_manager.load(mage_manager.name);
